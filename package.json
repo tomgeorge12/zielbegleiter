@@ -1,6 +1,7 @@
 {
   "name": "zielbegleiter",
   "version": "0.1.0",
+  "homepage": "https://tomgeorge12.github.io/react-gh-pages",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -31,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "gh-pages": "^5.0.0"
   }
 }

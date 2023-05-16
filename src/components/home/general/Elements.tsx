@@ -1,7 +1,8 @@
+import { Paper } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled(Paper)`
 min-height: 100vh;
 display: flex;
 flex-direction: row;
@@ -10,7 +11,7 @@ justify-content: center;
 font-size: calc(10px + 2vmin);
 `
 export const Img = styled.img`
-height: 675px;
+height: 30%;
 `
 export const DetailsContainer = styled.div`
 padding: 40px;

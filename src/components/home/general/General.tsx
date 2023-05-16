@@ -22,13 +22,13 @@ const General = () => {
                     Tution fees free education 
                 </li>
                 <li>
-                Part time job opportunities (20 hours per week)
+                    Part time job opportunities (20 hours per week)
                 </li>
                 <li>
-                Monthly stipend for Ausbildung and Diploma programmes 
+                    Monthly stipend for Ausbildung and Diploma programmes 
                 </li>
                 <li>
-                Intercultural communication
+                    Intercultural communication
                 </li>
             </ul>
             <Typography variant="body1">
