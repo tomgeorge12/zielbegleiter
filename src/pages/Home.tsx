@@ -1,19 +1,20 @@
-import React from 'react';
-import banner from '../banner.jpg';
-import '../App.css';
-import Navbar from '../components/navbar/Navbar';
-import styled from 'styled-components';
-import Banner from '../components/home/banner/Banner';
-import General from '../components/home/general/General';
+import "../App.css";
+import Banner from "../components/home/banner/Banner";
+import General from "../components/home/general/General";
+import Photos from "../components/home/photos/Photos";
+import ProgrammesAndEligibility from "../components/home/programmes/ProgrammesAndEligibility";
+import WhyUs from "../components/home/whyUs/WhyUs";
 
 const Home = () => {
   return (
     <>
-        <Banner />
-        <General />
+      <Banner />
+      <General />
+      <ProgrammesAndEligibility />
+      <WhyUs />
+      <Photos />
     </>
-
   );
-}
+};
 
 export default Home;
