@@ -18,7 +18,7 @@ export const DetailsContainer = styled.div`
   width: 500px;
   margin-inline-start: -75px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #f1fbff;
   border-style: solid;
   border-color: #000000 !important;
   border-width: 1px;

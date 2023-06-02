@@ -1,7 +1,7 @@
 {
   "name": "zielbegleiter",
   "version": "0.1.0",
-  "homepage": "https://tomgeorgedev.online",
+  "homepage": "https://tomgeorge12.github.io/zielbegleiter",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",

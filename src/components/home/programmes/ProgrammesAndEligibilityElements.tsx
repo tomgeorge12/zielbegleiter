@@ -18,9 +18,10 @@ export const DetailsContainer = styled.div`
   width: 500px;
   margin-inline-start: 20px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.95);
   border-style: solid;
   border-color: #000000 !important;
   border-width: 1px;
   border-radius: 1px;
+  background-color: #0b3866;
+  color: white;
 `;
