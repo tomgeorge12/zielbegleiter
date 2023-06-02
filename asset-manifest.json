@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/zielbegleiter/static/css/main.60b2fa71.css",
+    "main.js": "/zielbegleiter/static/js/main.04a2a2c4.js",
+    "static/js/787.2d7897f2.chunk.js": "/zielbegleiter/static/js/787.2d7897f2.chunk.js",
+    "static/media/Capture6.png": "/zielbegleiter/static/media/Capture6.6806aacc02071ca03d72.png",
+    "static/media/sec1.jpeg": "/zielbegleiter/static/media/sec1.863018f764172d6520a8.jpeg",
+    "static/media/banner.jpg": "/zielbegleiter/static/media/banner.3bef179c9f3ebef89e99.jpg",
+    "static/media/Capture7.png": "/zielbegleiter/static/media/Capture7.0dc66f1aed4572d20cec.png",
+    "static/media/Capture8.png": "/zielbegleiter/static/media/Capture8.273f7d8e5421d2456da0.png",
+    "static/media/Sec3.jpeg": "/zielbegleiter/static/media/Sec3.431f257ed33519666f4d.jpeg",
+    "static/media/zb-logo.png": "/zielbegleiter/static/media/zb-logo.fce527cd8ee6fcf24fdd.png",
+    "static/media/Capture4.png": "/zielbegleiter/static/media/Capture4.75741e3300aa29a32945.png",
+    "static/media/Capture5.png": "/zielbegleiter/static/media/Capture5.72b8b707d1eae016e390.png",
+    "static/media/Capture3.png": "/zielbegleiter/static/media/Capture3.b0cc06659c512d19e766.png",
+    "static/media/Sec2.jpeg": "/zielbegleiter/static/media/Sec2.b929d19a92b781215d01.jpeg",
+    "index.html": "/zielbegleiter/index.html",
+    "main.60b2fa71.css.map": "/zielbegleiter/static/css/main.60b2fa71.css.map",
+    "main.04a2a2c4.js.map": "/zielbegleiter/static/js/main.04a2a2c4.js.map",
+    "787.2d7897f2.chunk.js.map": "/zielbegleiter/static/js/787.2d7897f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60b2fa71.css",
+    "static/js/main.04a2a2c4.js"
+  ]
+}
