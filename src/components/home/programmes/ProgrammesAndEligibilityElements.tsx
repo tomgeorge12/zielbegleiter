@@ -11,11 +11,24 @@ export const Container = styled(Paper)`
   font-size: calc(10px + 2vmin);
 `;
 export const Img = styled.img`
-  height: 80%;
+  @media (min-width: 0px) {
+    width: 100%;
+    float: initial;
+  }
+  @media (min-width: 900px) {
+    width: 80%;
+    float: right;
+  }
 `;
 export const DetailsContainer = styled.div`
   padding: 40px;
-  width: 500px;
+  @media (min-width: 0px) {
+    margin-inline-start: 0px;
+  }
+  @media (min-width: 900px) {
+    max-width: 500px;
+    margin-inline-start: 20px;
+  }
   margin-inline-start: 20px;
   position: relative;
   border-style: solid;

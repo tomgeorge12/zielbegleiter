@@ -1,34 +1,51 @@
 import React from "react";
 import sec1 from "../../../sec1.jpeg";
-// import { Img, DetailsContainer } from './Elements';
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 const General = (props: any) => {
   return (
-    <Container>
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        "@media(min-width: 900px)": {
+          padding: "5%",
+        },
+      }}
+    >
       {props.title && (
+        <Grid item xs={7}>
+          <Box
+            sx={
+              {
+                // padding: "80px 20px 0 37px",
+                // margin: "auto",
+                // alignItems: "center",
+              }
+            }
+          >
+            <Typography variant="h3">{props.title}</Typography>
+          </Box>
+        </Grid>
+      )}
+      <Grid item>
         <Box
           sx={{
-            padding: "20px 20px 0 20px",
+            minHeight: "calc(100vh-60px)",
+            display: "flex",
+            padding: "20px",
             margin: "auto",
             alignItems: "center",
+            flexWrap: "wrap",
+            ...props.boxStyle,
           }}
         >
-          <Typography variant="h3">{props.title}</Typography>
+          {props.children}
         </Box>
-      )}
-      <Box
-        sx={{
-          height: "100vh",
-          display: "flex",
-          padding: "20px",
-          margin: "auto",
-          alignItems: "center",
-        }}
-      >
-        {props.children}
-      </Box>
-    </Container>
+      </Grid>
+    </Grid>
   );
 };
 

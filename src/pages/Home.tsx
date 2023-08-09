@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import "../App.css";
 import Banner from "../components/home/banner/Banner";
 import ContactForm from "../components/home/contactForm/ContactForm";
@@ -8,14 +9,26 @@ import WhyUs from "../components/home/whyUs/WhyUs";
 
 const Home = () => {
   return (
-    <>
-      <Banner />
-      <General />
-      <ProgrammesAndEligibility />
-      <WhyUs />
-      <Photos />
-      <ContactForm />
-    </>
+    <Grid container direction="row" justifyContent="center" alignItems="center">
+      <Grid item xs={12}>
+        <Banner />
+      </Grid>
+      <Grid item xs={12}>
+        <General />
+      </Grid>
+      <Grid item xs={12} sx={{ backgroundColor: "#F1FBFF" }}>
+        <ProgrammesAndEligibility />
+      </Grid>
+      <Grid item xs={12}>
+        <WhyUs />
+      </Grid>
+      <Grid item xs={12}>
+        <Photos />
+      </Grid>
+      <Grid item xs={12} sx={{ backgroundColor: "#0B3866", padding: "10px" }}>
+        <ContactForm />
+      </Grid>
+    </Grid>
   );
 };
 

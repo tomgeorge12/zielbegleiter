@@ -2,6 +2,7 @@ import React from "react";
 import banner from "../../../banner.jpg";
 import styled from "styled-components";
 import BannerInfo from "./BannerInfo";
+import { Grid } from "@mui/material";
 
 const BannerContainer = styled.div`
   min-height: 100vh;
@@ -10,6 +11,7 @@ const BannerContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  width: 1147px;
   &::before {
     content: "";
     background-image: url(${banner});
@@ -22,14 +24,16 @@ const BannerContainer = styled.div`
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.6;
+    opacity: 0.5;
   }
 `;
 const Banner = () => {
   return (
-    <BannerContainer>
-      <BannerInfo />
-    </BannerContainer>
+    <Grid container justifyContent="center" alignItems="center">
+      <BannerContainer>
+        <BannerInfo />
+      </BannerContainer>
+    </Grid>
   );
 };
 

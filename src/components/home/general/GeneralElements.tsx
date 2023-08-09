@@ -11,16 +11,28 @@ export const Container = styled(Paper)`
   font-size: calc(10px + 2vmin);
 `;
 export const Img = styled.img`
-  height: 80%;
+  @media (min-width: 0px) {
+    width: 100%;
+    float: initial;
+  }
+  @media (min-width: 900px) {
+    width: 85%;
+    float: right;
+  }
 `;
 export const DetailsContainer = styled.div`
   padding: 40px;
-  width: 500px;
-  margin-inline-start: -75px;
+  @media (min-width: 0px) {
+    margin-inline-start: 0px;
+  }
+  @media (min-width: 900px) {
+    margin-inline-start: -50px;
+    max-width: 500px;
+  }
   position: relative;
-  background-color: #f1fbff;
+  background-color: #ffffffe6;
   border-style: solid;
-  border-color: #000000 !important;
   border-width: 1px;
   border-radius: 1px;
+  border-color: #000000;
 `;
