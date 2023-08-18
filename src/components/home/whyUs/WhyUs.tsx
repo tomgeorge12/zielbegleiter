@@ -1,5 +1,5 @@
 import React from "react";
-import sec3 from "../../../Sec3.jpeg";
+import sec3 from "../../../Sec3.jpg";
 import { Img, DetailsContainer } from "./WhyUsElements";
 import { Box, Grid, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";
