@@ -1,0 +1,33 @@
+.slide-in-right {
+    transition: 1000ms ease-in-out;
+    height: auto;
+}
+
+.slide-in-right .hidden {
+    transform: translateX(150%);
+    opacity: 0;
+    translate: none;
+}
+
+.slide-in-right .visible {
+    transform: translateX(0%);
+    opacity: 1;
+    translate: 0 2rem;
+}
+
+.slide-in-left {
+    transition: 1100ms ease-in-out;
+   height: auto;
+}
+
+.slide-in-left .hidden {
+    transform: translateX(-150%);
+    opacity: 0;
+    translate: none;
+}
+
+.slide-in-left .visible {
+    transform: translateX(0%);
+    opacity: 1;
+    translate: 0 2rem;
+}

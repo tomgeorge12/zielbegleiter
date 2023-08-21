@@ -1,6 +1,10 @@
 import React from "react";
 import sec1 from "../../../sec1.jpeg";
 import { Box, Container, Grid, Typography } from "@mui/material";
+import AnimateIn, {
+  AnimateTypes,
+  ElementPositionTypes,
+} from "../home/animate/AnimateIn";
 
 const General = (props: any) => {
   return (
@@ -17,17 +21,22 @@ const General = (props: any) => {
     >
       {props.title && (
         <Grid item xs={7}>
-          <Box
-            sx={
-              {
-                // padding: "80px 20px 0 37px",
-                // margin: "auto",
-                // alignItems: "center",
-              }
-            }
+          <AnimateIn
+            type={AnimateTypes.FADE_IN}
+            elementPosition={ElementPositionTypes.RIGHT}
           >
-            <Typography variant="h3">{props.title}</Typography>
-          </Box>
+            <Box
+              sx={
+                {
+                  // padding: "80px 20px 0 37px",
+                  // margin: "auto",
+                  // alignItems: "center",
+                }
+              }
+            >
+              <Typography variant="h3">{props.title}</Typography>
+            </Box>
+          </AnimateIn>
         </Grid>
       )}
       <Grid item>

@@ -1,9 +1,5 @@
-import React from "react";
-import sec3 from "../../../Sec3.jpeg";
-import { FieldContainer, DetailsContainer } from "./FormElements";
-import { Box, Button, Paper, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";
-import styled from "styled-components";
 
 const ContactForm = () => {
   return (
@@ -43,8 +39,6 @@ const ContactForm = () => {
           variant="standard"
           color={"warning"}
         />
-        {/* </Box> */}
-
         <Box>
           <Button variant="contained" sx={{ margin: "20px 20px 0 0" }}>
             Submit

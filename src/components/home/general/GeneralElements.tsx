@@ -16,9 +16,13 @@ export const Img = styled.img`
     float: initial;
   }
   @media (min-width: 900px) {
-    width: 85%;
+    width: 100%;
     float: right;
-  }
+  },
+  // transition: 0.5s linear;
+  // transform: ${(props) => (props.hidden ? "translateY(-100%)" : "")};
+  // transform: ${(props) => (props.hidden ? "translateY(-150%)" : "")};
+  // opacity: ${(props) => (props.hidden ? 0 : 1)};
 `;
 export const DetailsContainer = styled.div`
   padding: 40px;

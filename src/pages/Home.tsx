@@ -13,7 +13,7 @@ const Home = () => {
       <Grid item xs={12}>
         <Banner />
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} style={{ overflowX: "hidden" }}>
         <General />
       </Grid>
       <Grid item xs={12} sx={{ backgroundColor: "#F1FBFF" }}>
@@ -22,7 +22,7 @@ const Home = () => {
       <Grid item xs={12}>
         <WhyUs />
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ backgroundColor: "#F1FBFF" }}>
         <Photos />
       </Grid>
       <Grid item xs={12} sx={{ backgroundColor: "#0B3866", padding: "10px" }}>

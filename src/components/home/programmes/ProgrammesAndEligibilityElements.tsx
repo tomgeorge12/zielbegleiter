@@ -16,7 +16,7 @@ export const Img = styled.img`
     float: initial;
   }
   @media (min-width: 900px) {
-    width: 80%;
+    width: 95%;
     float: right;
   }
 `;
