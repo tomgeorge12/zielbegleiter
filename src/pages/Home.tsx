@@ -6,6 +6,7 @@ import General from "../components/home/general/General";
 import Photos from "../components/home/photos/Photos";
 import ProgrammesAndEligibility from "../components/home/programmes/ProgrammesAndEligibility";
 import WhyUs from "../components/home/whyUs/WhyUs";
+import Footer from "../components/home/footer/Footer";
 
 const Home = () => {
   return (
@@ -27,6 +28,9 @@ const Home = () => {
       </Grid>
       <Grid item xs={12} sx={{ backgroundColor: "#0B3866", padding: "10px" }}>
         <ContactForm />
+      </Grid>
+      <Grid item xs={12} sx={{ backgroundColor: "#212730", color: "white" }}>
+        <Footer />
       </Grid>
     </Grid>
   );

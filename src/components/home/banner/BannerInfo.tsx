@@ -2,6 +2,10 @@ import React from "react";
 import banner from "../../../banner.jpg";
 import styled from "styled-components";
 import { Grid, Paper, Typography } from "@mui/material";
+import AnimateIn, {
+  AnimateTypes,
+  ElementPositionTypes,
+} from "../animate/AnimateIn";
 
 const Container = styled.div`
   position: relative;
@@ -52,11 +56,13 @@ const BannerInfo = () => {
         columns={30}
       >
         {/* <Grid item xs={30} sm={30} md={19} lg={19}> */}
-        <HeaderText color={"#212730"}>
-          {"ziel "}
-          <span style={{ color: "#ea7704" }}>{"colors "}</span>
-          {"your dreams"}
-        </HeaderText>
+        <AnimateIn type={AnimateTypes.FADE_IN}>
+          <HeaderText color={"#212730"}>
+            {"ziel "}
+            <span style={{ color: "#ea7704" }}>{"colors "}</span>
+            {"your dreams"}
+          </HeaderText>
+        </AnimateIn>
         {/* </Grid> */}
         {/* <Grid item xs={30} sm={30} md={19} lg={19}>
           <HeaderText color={"#212730"}>{"ziel "}</HeaderText>
@@ -69,27 +75,29 @@ const BannerInfo = () => {
         </Grid> */}
       </Grid>
       <Grid sx={{ width: "100%" }}>
-        <Paper
-          elevation={0}
-          sx={{
-            marginTop: "40px",
-            padding: "40px 0px",
-            opacity: "0.7",
-          }}
-        >
-          <ParagraphText>
-            Are You Looking to Study or Work in Germany...
-          </ParagraphText>
-          <MixParagraphText>
-            <ParagraphText>Here The Real&nbsp;</ParagraphText>
-            <ParagraphText sx={{ color: "rgb(234, 119, 4)" }}>
-              Companion&nbsp;
+        <AnimateIn type={AnimateTypes.FADE_IN}>
+          <Paper
+            elevation={0}
+            sx={{
+              marginTop: "40px",
+              padding: "40px 0px",
+              opacity: "0.7",
+            }}
+          >
+            <ParagraphText>
+              Are You Looking to Study or Work in Germany...
             </ParagraphText>
-            <ParagraphText>is With You...</ParagraphText>
-          </MixParagraphText>
+            <MixParagraphText>
+              <ParagraphText>Here The Real&nbsp;</ParagraphText>
+              <ParagraphText sx={{ color: "rgb(234, 119, 4)" }}>
+                Companion&nbsp;
+              </ParagraphText>
+              <ParagraphText>is With You...</ParagraphText>
+            </MixParagraphText>
 
-          <ParagraphText>To Accompany You...</ParagraphText>
-        </Paper>
+            <ParagraphText>To Accompany You...</ParagraphText>
+          </Paper>
+        </AnimateIn>
       </Grid>
     </Grid>
   );

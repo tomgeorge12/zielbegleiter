@@ -58,14 +58,14 @@ const AnimateIn: FC<PropsWithChildren<AnimateProps>> = ({
                 transform: onScreen ? "translateX(0%)" : "translateX(150%)",
                 opacity: onScreen ? 1 : 0,
                 translate: onScreen ? "0 2rem" : "none",
-                transition: "1100ms ease-in-out",
+                transition: "1500ms ease-in-out",
                 height: childRef ? childRef?.current?.height : "auto",
               }
             : {
                 transform: onScreen ? "translateX(0%)" : "translateX(-150%)",
                 opacity: onScreen ? 1 : 0,
                 translate: onScreen ? "0 2rem" : "none",
-                transition: "1100ms ease-in-out",
+                transition: "1500ms ease-in-out",
                 height: childRef ? childRef?.current?.height : "auto",
               }
         }

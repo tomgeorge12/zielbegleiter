@@ -89,7 +89,7 @@ export const NavBtnLink = styled(Link)`
   }
 `;
 
-export const Img = styled.img`
+export const Logo = styled.img`
   height: 52px;
   margin-right: 10px;
   // @media screen and (max-width: 768px) {

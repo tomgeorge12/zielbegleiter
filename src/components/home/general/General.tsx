@@ -3,7 +3,7 @@ import sec1 from "../../../sec1.jpg";
 import { Img, DetailsContainer } from "./GeneralElements";
 import { Grid, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";
-import useScrollListener from "../../navbar/useScrollListener";
+import useScrollListener from "../../../hooks/useScrollListener";
 import AnimateIn, {
   AnimateTypes,
   ElementPositionTypes,

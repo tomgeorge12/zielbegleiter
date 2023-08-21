@@ -1,26 +1,12 @@
-import { Paper } from "@mui/material";
-import React from "react";
+import { Typography } from "@mui/material";
 import styled from "styled-components";
 
-export const Container = styled(Paper)`
-  min-height: 100vh;
+export const LogoWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  white-space: nowrap;
 `;
-export const Img = styled.img`
-  height: 80%;
-  margin-inline-start: 20px;
-`;
-export const DetailsContainer = styled.div`
-  padding: 40px;
-  width: 500px;
-  position: relative;
-  background-color: #f1fbff;
-  border-style: solid;
-  border-color: #000000 !important;
-  border-width: 1px;
-  border-radius: 1px;
+
+export const CommonTypography = styled(Typography)`
+  padding: 5px 0px;
 `;

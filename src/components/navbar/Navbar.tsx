@@ -6,12 +6,12 @@ import {
   NavMenu,
   NavBtn,
   NavBtnLink,
-  Img,
+  Logo,
 } from "./NavbarElements";
 import logo from "../../zb-logo.png";
 import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import useScrollListener from "./useScrollListener";
+import useScrollListener from "../../hooks/useScrollListener";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <Nav hidden={hideNavBar}>
       <NavMenu>
-        <Img src={logo} />
+        <Logo src={logo} />
         <Typography variant="h5">ziel begleiter</Typography>
       </NavMenu>
       <NavMenu>

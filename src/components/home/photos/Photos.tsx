@@ -10,6 +10,7 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { Grid, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";
+import AnimateIn, { AnimateTypes } from "../animate/AnimateIn";
 
 const ImageContainer = styled.div`
   padding: 5px;
@@ -59,16 +60,18 @@ const Photos = () => {
           <Typography>{"Photo Booth"}</Typography>
         </Grid>
         <Grid> */}
-      <ImageGallery
-        items={images}
-        showNav={true}
-        showFullscreenButton={false}
-        showPlayButton={false}
-        autoPlay={true}
-        // thumbnailPosition={"right"}
-      />
-      {/* </Grid>
+      <AnimateIn type={AnimateTypes.FADE_IN}>
+        <ImageGallery
+          items={images}
+          showNav={true}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          autoPlay={true}
+          // thumbnailPosition={"right"}
+        />
+        {/* </Grid>
       </CommonBox> */}
+      </AnimateIn>
     </CarouselWrapper>
   );
 };

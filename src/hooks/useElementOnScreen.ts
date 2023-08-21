@@ -17,7 +17,7 @@ export default function useElementOnScreen(
         }
         return () => {
             if (ref.current) {
-                observer.unobserve(ref.current);
+                observer.disconnect();
             }
         };
     }, [isIntersecting]);

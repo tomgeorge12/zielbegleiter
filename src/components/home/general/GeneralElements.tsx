@@ -1,15 +1,14 @@
 import { Paper } from "@mui/material";
-import React from "react";
 import styled from "styled-components";
 
-export const Container = styled(Paper)`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-`;
+// export const Container = styled(Paper)`
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+// `;
 export const Img = styled.img`
   @media (min-width: 0px) {
     width: 100%;
@@ -19,10 +18,6 @@ export const Img = styled.img`
     width: 100%;
     float: right;
   },
-  // transition: 0.5s linear;
-  // transform: ${(props) => (props.hidden ? "translateY(-100%)" : "")};
-  // transform: ${(props) => (props.hidden ? "translateY(-150%)" : "")};
-  // opacity: ${(props) => (props.hidden ? 0 : 1)};
 `;
 export const DetailsContainer = styled.div`
   padding: 40px;
