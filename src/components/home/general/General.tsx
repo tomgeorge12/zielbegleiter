@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import sec1 from "../../../sec1.jpg";
+import sec1 from "../../../images/sec1.jpg";
 import { Img, DetailsContainer } from "./GeneralElements";
 import { Grid, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";

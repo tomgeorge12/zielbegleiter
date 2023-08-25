@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import TripOriginIcon from "@mui/icons-material/TripOrigin";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import AdjustIcon from "@mui/icons-material/Adjust";
-import sec2 from "../../../Sec2.jpg";
+import sec2 from "../../../images/Sec2.jpg";
 import { Img, DetailsContainer } from "./ProgrammesAndEligibilityElements";
 import {
   Box,

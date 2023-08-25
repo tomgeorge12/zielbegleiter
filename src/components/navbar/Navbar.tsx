@@ -8,7 +8,7 @@ import {
   NavBtnLink,
   Logo,
 } from "./NavbarElements";
-import logo from "../../zb-logo.png";
+import logo from "../../images/zb-logo.png";
 import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import useScrollListener from "../../hooks/useScrollListener";
@@ -18,6 +18,7 @@ const Navbar = () => {
     null
   );
   const [hideNavBar, setHideNavBar] = useState<boolean>(false);
+  const [route, setRoute] = useState<string>("home");
   const scroll = useScrollListener();
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -35,6 +36,16 @@ const Navbar = () => {
 
     setHideNavBar(isNavHidden);
   }, [scroll.y, scroll.lastY]);
+
+  const getSelectedStyle = (item: string) => {
+    if (route == item) {
+      return {
+        borderBottom: "2px solid rgb(11, 56, 102)",
+        color: "rgb(0, 0, 0)",
+      };
+    }
+    return {};
+  };
 
   return (
     <Nav hidden={hideNavBar}>
@@ -74,11 +85,6 @@ const Navbar = () => {
               display: { xs: "block", sm: "block", md: "none" },
             }}
           >
-            {/* {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">{page}</Typography>
-              </MenuItem>
-            ))} */}
             <MenuItem onClick={handleCloseNavMenu}>
               <NavLink to="/home">Home</NavLink>
             </MenuItem>
@@ -90,8 +96,20 @@ const Navbar = () => {
         <Box
           sx={{ flexGrow: 1, display: { xs: "none", sm: "none", md: "flex" } }}
         >
-          <NavLink to="/home">Home</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink
+            to="/home"
+            onClick={() => setRoute("home")}
+            style={getSelectedStyle("home")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/contact"
+            onClick={() => setRoute("contact")}
+            style={getSelectedStyle("contact")}
+          >
+            Contact Us
+          </NavLink>
         </Box>
       </NavMenu>
     </Nav>

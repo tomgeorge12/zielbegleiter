@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import logo from "../../../zb-logo.png";
+import logo from "../../../images/zb-logo.png";
 import { Logo } from "../../navbar/NavbarElements";
 import { CommonTypography, LogoWrapper } from "./FooterElements";
 import { StarList } from "../programmes/ProgrammesAndEligibility";

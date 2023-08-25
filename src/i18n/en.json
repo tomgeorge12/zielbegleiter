@@ -1,0 +1,11 @@
+{
+  "NAME": "Name",
+  "EMAIL": "Email",
+  "PHONE": "Phone",
+  "SUBMIT": "Submit",
+  "RESET": "Reset",
+  "CONTACT_FORM_HEADER": "Let us get in touch with you",
+  "PHONE_VALIDATION_ERROR": "Please enter a valid phone number",
+  "EMAIL_VALIDATION_ERROR": "Please enter valid email",
+  "NAME_VALIDATION_ERROR": "Please enter name"
+}

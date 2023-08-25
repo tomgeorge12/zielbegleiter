@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Contact from './pages/Contact';
 import styled from 'styled-components';
-import banner from './banner.jpg';
+import banner from "./images/banner.jpg";
 
 export const Body = styled.div`
 background-image: url(${banner});

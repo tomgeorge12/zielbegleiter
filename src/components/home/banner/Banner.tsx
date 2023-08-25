@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../../banner.jpg";
+import banner from "../../../images/banner.jpg";
 import styled from "styled-components";
 import BannerInfo from "./BannerInfo";
 import { Grid } from "@mui/material";

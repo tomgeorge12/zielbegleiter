@@ -2,7 +2,7 @@ import { RefObject, useEffect, useState } from "react";
 
 export default function useElementOnScreen(
     ref: RefObject<Element>,
-    rootMargin = "0px",
+    rootMargin = "-30px",
 ) {
     const [isIntersecting, setIsIntersecting] = useState(false);
     useEffect(() => {
