@@ -1,18 +1,12 @@
 import React, { useRef } from "react";
-import TripOriginIcon from "@mui/icons-material/TripOrigin";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import sec2 from "../../../images/Sec2.jpg";
-import { Img, DetailsContainer } from "./ProgrammesAndEligibilityElements";
 import {
-  Box,
-  Divider,
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+  Img,
+  DetailsContainer,
+  StyledListItemText,
+} from "./ProgrammesAndEligibilityElements";
+import { Box, Divider, Grid, List, ListItem, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";
 import styled from "styled-components";
 import AnimateIn, {
@@ -27,16 +21,12 @@ const Icon = styled.div`
 export const StarList = (props: any) => {
   const { icon, items } = props;
   return (
-    <List sx={{ paddingLeft: "20px" }}>
+    <List sx={{ paddingLeft: "20px", fontFamily: "'Poppins' !important" }}>
       {items.map((item: any) => {
         return (
           <ListItem key={item} disablePadding>
-            {/* <ListItemIcon> */}
-            {/* <FiberManualRecordIcon /> */}
-            {/* </ListItemIcon> */}
-            {/* <Icon>{icon}</Icon> */}
             <AdjustIcon sx={{ width: "12px" }} />
-            <ListItemText primary={item} sx={{ padding: "5px" }} />
+            <StyledListItemText primary={item} />
           </ListItem>
         );
       })}
@@ -47,11 +37,15 @@ export const StarList = (props: any) => {
 const DetailSection = ({ title, listItems }: any) => {
   return (
     <Box sx={{ padding: "15px 0px" }}>
-      {title && <Typography variant="h4">{title}</Typography>}
-      <StarList
-        items={listItems}
-        // icon={<AdjustIcon />}
-      />
+      {title && (
+        <Typography
+          variant="h4"
+          sx={{ fontFamily: "'Libre Baskerville' !important" }}
+        >
+          {title}
+        </Typography>
+      )}
+      <StarList items={listItems} />
       <Divider light sx={{ borderColor: "white", opacity: "0.6" }} />
     </Box>
   );

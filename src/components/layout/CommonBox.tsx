@@ -1,5 +1,4 @@
 import React from "react";
-import sec1 from "../../../sec1.jpeg";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import AnimateIn, {
   AnimateTypes,
@@ -25,16 +24,13 @@ const General = (props: any) => {
             type={AnimateTypes.FADE_IN}
             elementPosition={ElementPositionTypes.RIGHT}
           >
-            <Box
-              sx={
-                {
-                  // padding: "80px 20px 0 37px",
-                  // margin: "auto",
-                  // alignItems: "center",
-                }
-              }
-            >
-              <Typography variant="h3">{props.title}</Typography>
+            <Box>
+              <Typography
+                variant="h3"
+                style={{ fontFamily: "Libre Baskerville" }}
+              >
+                {props.title}
+              </Typography>
             </Box>
           </AnimateIn>
         </Grid>

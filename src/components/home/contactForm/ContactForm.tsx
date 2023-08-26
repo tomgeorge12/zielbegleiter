@@ -1,4 +1,5 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Alert, Box, Button, TextField, Typography } from "@mui/material";
+import emailjs from "emailjs-com";
 import CommonBox from "../../layout/CommonBox";
 import { useEffect, useState } from "react";
 import useLocale from "../../../hooks/useLocale";
@@ -11,6 +12,8 @@ type FormElement = {
 
 const ContactForm = () => {
   const { translate } = useLocale();
+  const [showAlert, setShowAlert] = useState(false);
+  const [errorAlert, setErrorAlert] = useState(false);
   const [name, setName] = useState<FormElement>({
     value: "",
     isValid: false,
@@ -30,6 +33,24 @@ const ContactForm = () => {
 
   const onSubmit = () => {
     console.log(name, email, phone);
+    const templateParams = {
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+    };
+    emailjs
+      .send(
+        "service_7aofpu4",
+        "template_5z2c63d",
+        templateParams,
+        "RsdJ03dg9KWj7T6do"
+      )
+      .then((response) => setShowAlert(true))
+      .catch((error) => {
+        if (error) {
+          setErrorAlert(true);
+        }
+      });
   };
 
   useEffect(() => {
@@ -104,7 +125,26 @@ const ContactForm = () => {
           "& > :not(style)": { m: 1, width: "100%", display: "flex" },
         }}
       >
-        <Typography variant={"h4"}>
+        {showAlert && (
+          <Alert
+            onClose={() => {
+              setShowAlert(false);
+            }}
+          >
+            Enquiry submitted successfully!
+          </Alert>
+        )}
+        {errorAlert && (
+          <Alert
+            severity="error"
+            onClose={() => {
+              setErrorAlert(false);
+            }}
+          >
+            Enquiry submitted successfully!
+          </Alert>
+        )}
+        <Typography variant={"h4"} sx={{ fontFamily: "Libre Baskerville" }}>
           {translate("CONTACT_FORM_HEADER")}
         </Typography>
         <TextField
@@ -161,6 +201,8 @@ const ContactForm = () => {
               setName(emptyElement);
               setEmail(emptyElement);
               setPhone(emptyElement);
+              setShowAlert(false);
+              setErrorAlert(false);
             }}
           >
             {translate("RESET")}

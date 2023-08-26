@@ -1,3 +1,4 @@
+import ListItemText from "@mui/material/ListItemText";
 import styled from "styled-components";
 
 export const Img = styled.img`
@@ -27,4 +28,11 @@ export const DetailsContainer = styled.div`
   border-radius: 1px;
   background-color: #0b3866;
   color: white;
+`;
+
+export const StyledListItemText = styled(ListItemText)`
+  > span {
+    font-family: "Poppins" !important;
+  }
+  padding: 5px;
 `;

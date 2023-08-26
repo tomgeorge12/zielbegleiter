@@ -1,4 +1,5 @@
-import { Grid } from "@mui/material";
+import { Fab, Grid } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import "../App.css";
 import Banner from "../components/home/banner/Banner";
 import ContactForm from "../components/home/contactForm/ContactForm";
@@ -7,6 +8,7 @@ import Photos from "../components/home/photos/Photos";
 import ProgrammesAndEligibility from "../components/home/programmes/ProgrammesAndEligibility";
 import WhyUs from "../components/home/whyUs/WhyUs";
 import Footer from "../components/home/footer/Footer";
+import FloatingContactForm from "../components/home/floatingContactForm/FloatingContactForm";
 
 const Home = () => {
   return (
@@ -32,6 +34,7 @@ const Home = () => {
       <Grid item xs={12} sx={{ backgroundColor: "#212730", color: "white" }}>
         <Footer />
       </Grid>
+      {/* <FloatingContactForm /> */}
     </Grid>
   );
 };

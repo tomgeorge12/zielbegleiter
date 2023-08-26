@@ -1,4 +1,3 @@
-import React from "react";
 import banner from "../../../images/banner.jpg";
 import styled from "styled-components";
 import BannerInfo from "./BannerInfo";

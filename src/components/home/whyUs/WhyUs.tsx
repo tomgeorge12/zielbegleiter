@@ -3,7 +3,6 @@ import sec3 from "../../../images/Sec3.jpg";
 import { Img, DetailsContainer } from "./WhyUsElements";
 import { Box, Grid, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";
-import styled from "styled-components";
 import { StarList } from "../programmes/ProgrammesAndEligibility";
 import AnimateIn, {
   AnimateTypes,
@@ -22,10 +21,16 @@ const WhyUs = () => {
             elementPosition={ElementPositionTypes.RIGHT}
           >
             <DetailsContainer>
-              <Typography variant="h3" sx={{ paddingBottom: "20px" }}>
+              <Typography
+                variant="h4"
+                sx={{
+                  paddingBottom: "20px",
+                  fontFamily: "Libre Baskerville",
+                }}
+              >
                 Why ziel begleiter...?
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="body1" sx={{ fontFamily: "Poppins" }}>
                 In your journey towards your dreams,
               </Typography>
               <Box sx={{ padding: "15px 0px" }}>

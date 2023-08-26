@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Nav,
-  NavLink,
-  // Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink,
-  Logo,
-} from "./NavbarElements";
+import { Nav, NavLink, NavMenu, Logo } from "./NavbarElements";
 import logo from "../../images/zb-logo.png";
 import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -51,7 +43,9 @@ const Navbar = () => {
     <Nav hidden={hideNavBar}>
       <NavMenu>
         <Logo src={logo} />
-        <Typography variant="h5">ziel begleiter</Typography>
+        <Typography variant="h5" sx={{ fontFamily: "Inter" }}>
+          ziel begleiter
+        </Typography>
       </NavMenu>
       <NavMenu>
         <Box
@@ -94,7 +88,11 @@ const Navbar = () => {
           </Menu>
         </Box>
         <Box
-          sx={{ flexGrow: 1, display: { xs: "none", sm: "none", md: "flex" } }}
+          sx={{
+            flexGrow: 1,
+            display: { xs: "none", sm: "none", md: "flex" },
+            fontFamily: "Poppins",
+          }}
         >
           <NavLink
             to="/home"

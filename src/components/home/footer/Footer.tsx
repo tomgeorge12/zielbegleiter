@@ -1,8 +1,7 @@
-import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import logo from "../../../images/zb-logo.png";
 import { Logo } from "../../navbar/NavbarElements";
-import { CommonTypography, LogoWrapper } from "./FooterElements";
+import { CommonTypography, LogoWrapper, Link } from "./FooterElements";
 import { StarList } from "../programmes/ProgrammesAndEligibility";
 
 const Footer = () => {
@@ -17,13 +16,28 @@ const Footer = () => {
       }}
     >
       <Grid item sm={12} md={5}>
-        <Box sx={{ padding: "0 4% 0 45%" }}>
+        <Box
+          sx={{
+            "@media(min-width: 900px)": {
+              padding: "0 4% 0 45%",
+            },
+            padding: "25px",
+          }}
+        >
           <LogoWrapper>
             <Logo src={logo} />
-            <Typography variant="h5">ziel begleiter</Typography>
+            <Typography variant="h5" sx={{ fontFamily: "Inter" }}>
+              ziel begleiter
+            </Typography>
           </LogoWrapper>
-          <Box sx={{ padding: "30px 0px 0px 0px" }}>
-            <Typography variant="h6">The Real Companionship</Typography>
+          <Box
+            sx={{
+              padding: "30px 0px 0px 0px",
+            }}
+          >
+            <Typography variant="h6" sx={{ fontFamily: "Poppins" }}>
+              The Real Companionship
+            </Typography>
 
             <StarList
               items={[
@@ -37,8 +51,17 @@ const Footer = () => {
         </Box>
       </Grid>
       <Grid item sm={12} md={3}>
-        <Box sx={{ padding: "0 4%" }}>
-          <Typography variant="h6">Contact Details</Typography>
+        <Box
+          sx={{
+            "@media(min-width: 900px)": {
+              padding: "0 4%",
+            },
+            padding: "25px",
+          }}
+        >
+          <Typography variant="h6" sx={{ fontFamily: "Poppins" }}>
+            Contact Details
+          </Typography>
           <CommonTypography>
             Mannolikkal Building, Panamaram, Wayanad, Kerala, India. Pin: 670721
           </CommonTypography>
@@ -49,13 +72,30 @@ const Footer = () => {
         </Box>
       </Grid>
       <Grid item sm={12} md={4}>
-        <Box sx={{ padding: "0 50% 0 4%" }}>
-          <Typography variant="h6">Quick Links</Typography>
-          <CommonTypography>Home</CommonTypography>
-          <CommonTypography>Contact Us</CommonTypography>
+        <Box
+          sx={{
+            "@media(min-width: 900px)": {
+              padding: "0 50% 0 4%",
+            },
+            padding: "25px",
+          }}
+        >
+          <Typography variant="h6" sx={{ fontFamily: "Poppins" }}>
+            Quick Links
+          </Typography>
+          <Link to="/home">Home</Link>
+          <Link to="/contact">Contact Us</Link>
         </Box>
       </Grid>
-      <Typography variant="caption" sx={{ margin: "auto", color: "#d8d8d8" }}>
+      <Typography
+        variant="caption"
+        sx={{
+          margin: "auto",
+          color: "#d8d8d8",
+          display: "block",
+          fontFamily: "Poppins",
+        }}
+      >
         ©Copyright | ziel begleiter 2023. All Right Reserved.
       </Typography>
     </Grid>

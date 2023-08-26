@@ -55,11 +55,6 @@ const Photos = () => {
 
   return (
     <CarouselWrapper>
-      {/* <CommonBox>
-        <Grid>
-          <Typography>{"Photo Booth"}</Typography>
-        </Grid>
-        <Grid> */}
       <AnimateIn type={AnimateTypes.FADE_IN}>
         <ImageGallery
           items={images}
@@ -67,10 +62,7 @@ const Photos = () => {
           showFullscreenButton={false}
           showPlayButton={false}
           autoPlay={true}
-          // thumbnailPosition={"right"}
         />
-        {/* </Grid>
-      </CommonBox> */}
       </AnimateIn>
     </CarouselWrapper>
   );

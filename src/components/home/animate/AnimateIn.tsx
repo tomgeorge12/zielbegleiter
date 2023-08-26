@@ -1,11 +1,4 @@
-import {
-  PropsWithChildren,
-  useRef,
-  FC,
-  RefObject,
-  useEffect,
-  useState,
-} from "react";
+import { PropsWithChildren, useRef, FC, RefObject } from "react";
 import useElementOnScreen from "../../../hooks/useElementOnScreen";
 import "./AnimateIn.css";
 
@@ -31,23 +24,9 @@ const AnimateIn: FC<PropsWithChildren<AnimateProps>> = ({
   childRef,
   elementPosition,
 }: any) => {
-  const [classNames, setClassNames] = useState("");
   const ref = useRef<HTMLDivElement>(null);
   const onScreen = useElementOnScreen(ref);
 
-  // useEffect(() => {
-  //   if (type === "right" && onScreen) {
-  //     setClassNames("slide-in-right visible");
-  //   } else if (type === "right" && !onScreen) {
-  //     setClassNames("slide-in-right hidden");
-  //   } else if (type === "left" && onScreen) {
-  //     setClassNames("slide-in-left visible");
-  //   } else if (type === "left" && !onScreen) {
-  //     setClassNames("slide-in-left hidden");
-  //   }
-  // }, [onScreen]);
-
-  console.log("onScreen:: ", onScreen);
   if (type === AnimateTypes.SLIDE_IN) {
     return (
       <div
@@ -55,14 +34,14 @@ const AnimateIn: FC<PropsWithChildren<AnimateProps>> = ({
         style={
           elementPosition === ElementPositionTypes.RIGHT
             ? {
-                transform: onScreen ? "translateX(0%)" : "translateX(150%)",
+                transform: onScreen ? "translateX(0%)" : "translateX(10%)",
                 opacity: onScreen ? 1 : 0,
                 translate: onScreen ? "0 2rem" : "none",
                 transition: "1500ms ease-in-out",
                 height: childRef ? childRef?.current?.height : "auto",
               }
             : {
-                transform: onScreen ? "translateX(0%)" : "translateX(-150%)",
+                transform: onScreen ? "translateX(0%)" : "translateX(-10%)",
                 opacity: onScreen ? 1 : 0,
                 translate: onScreen ? "0 2rem" : "none",
                 transition: "1500ms ease-in-out",

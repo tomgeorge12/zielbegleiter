@@ -1,28 +1,12 @@
-import React from "react";
-import banner from "../../../banner.jpg";
 import styled from "styled-components";
 import { Grid, Paper, Typography } from "@mui/material";
-import AnimateIn, {
-  AnimateTypes,
-  ElementPositionTypes,
-} from "../animate/AnimateIn";
+import AnimateIn, { AnimateTypes } from "../animate/AnimateIn";
 
-const Container = styled.div`
-  position: relative;
-`;
-
-const ParagraphContainer = styled(Paper)`
-  marginTop: 40px,
-  padding: 30px,
-  &::before {
-    content: "";
-    opacity: 0.5;
-  }
-`;
 const HeaderText = styled.span`
   color: ${(props) => props.color};
   font-weight: 500 !important;
   position: relative;
+  font-family: Libre Baskerville;
 `;
 
 const ParagraphText = styled(Typography)`
@@ -30,10 +14,7 @@ const ParagraphText = styled(Typography)`
   text-align: center;
   line-height: 2 !important;
   font-weight: 500 !important;
-`;
-const MixParagraphText = styled.span`
-  display: flex;
-  justify-content: center;
+  font-family: "Poppins" !important;
 `;
 
 const BannerInfo = () => {
@@ -55,7 +36,6 @@ const BannerInfo = () => {
         sx={{ marginBottom: "70px" }}
         columns={30}
       >
-        {/* <Grid item xs={30} sm={30} md={19} lg={19}> */}
         <AnimateIn type={AnimateTypes.FADE_IN}>
           <HeaderText color={"#212730"}>
             {"ziel "}
@@ -63,16 +43,6 @@ const BannerInfo = () => {
             {"your dreams"}
           </HeaderText>
         </AnimateIn>
-        {/* </Grid> */}
-        {/* <Grid item xs={30} sm={30} md={19} lg={19}>
-          <HeaderText color={"#212730"}>{"ziel "}</HeaderText>
-        </Grid>
-        <Grid item>
-          <HeaderText color={"rgb(234, 119, 4)"}>{"colors "}</HeaderText>
-        </Grid>
-        <Grid item>
-          <HeaderText color={"#212730"}>{"your dreams"}</HeaderText>
-        </Grid> */}
       </Grid>
       <Grid sx={{ width: "100%" }}>
         <AnimateIn type={AnimateTypes.FADE_IN}>
@@ -82,18 +52,15 @@ const BannerInfo = () => {
               marginTop: "40px",
               padding: "40px 0px",
               opacity: "0.7",
+              fontFamily: "Poppins",
             }}
           >
             <ParagraphText>
               Are You Looking to Study or Work in Germany...
             </ParagraphText>
-            <MixParagraphText>
-              <ParagraphText>Here The Real&nbsp;</ParagraphText>
-              <ParagraphText sx={{ color: "rgb(234, 119, 4)" }}>
-                Companion&nbsp;
-              </ParagraphText>
-              <ParagraphText>is With You...</ParagraphText>
-            </MixParagraphText>
+            <ParagraphText sx={{ color: "rgb(234, 119, 4)" }}>
+              Here The Real Companion is With You...
+            </ParagraphText>
 
             <ParagraphText>To Accompany You...</ParagraphText>
           </Paper>
