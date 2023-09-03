@@ -12,22 +12,24 @@ export const Img = styled.img`
   }
 `;
 export const DetailsContainer = styled.div`
-  padding: 40px;
+  // padding: 20px 40px;
   @media (min-width: 0px) {
     margin-inline-start: 0px;
+    padding: 0px 20px;
   }
   @media (min-width: 900px) {
     max-width: 500px;
     margin-inline-start: 20px;
+    padding: 40px;
   }
   margin-inline-start: 20px;
   position: relative;
   border-style: solid;
-  border-color: #000000 !important;
+  border-color: rgb(204 204 204) !important;
   border-width: 1px;
   border-radius: 1px;
-  background-color: #0b3866;
-  color: white;
+  background-color: white;
+  color: black;
 `;
 
 export const StyledListItemText = styled(ListItemText)`

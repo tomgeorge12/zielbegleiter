@@ -16,16 +16,44 @@ const Home = () => {
       <Grid item xs={12}>
         <Banner />
       </Grid>
-      <Grid item xs={12} style={{ overflowX: "hidden" }}>
+      <Grid
+        item
+        xs={12}
+        style={{
+          overflowX: "hidden",
+          backgroundImage: "radial-gradient(white, #F9B872)",
+        }}
+      >
         <General />
       </Grid>
-      <Grid item xs={12} sx={{ backgroundColor: "#F1FBFF" }}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          backgroundColor: "#F9B872",
+          backgroundImage: "radial-gradient(white, #F9B872)",
+        }}
+      >
         <ProgrammesAndEligibility />
       </Grid>
-      <Grid item xs={12}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          backgroundColor: "#F9B872",
+          backgroundImage: "radial-gradient(white, #F9B872)",
+        }}
+      >
         <WhyUs />
       </Grid>
-      <Grid item xs={12} sx={{ backgroundColor: "#F1FBFF" }}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          backgroundColor: "#F9B872",
+          backgroundImage: "radial-gradient(white, #F9B872)",
+        }}
+      >
         <Photos />
       </Grid>
       <Grid item xs={12} sx={{ backgroundColor: "#0B3866", padding: "10px" }}>

@@ -13,8 +13,12 @@ const General = (props: any) => {
       justifyContent="center"
       alignItems="center"
       sx={{
+        "@media(min-width: 0px)": {
+          justifyContent: "left",
+        },
         "@media(min-width: 900px)": {
           padding: "5%",
+          justifyContent: "center",
         },
       }}
     >
@@ -24,10 +28,21 @@ const General = (props: any) => {
             type={AnimateTypes.FADE_IN}
             elementPosition={ElementPositionTypes.RIGHT}
           >
-            <Box>
+            <Box
+              sx={{
+                "@media(min-width: 900px)": {
+                  display: "flex",
+                  justifyContent: "center",
+                },
+              }}
+            >
               <Typography
                 variant="h3"
-                style={{ fontFamily: "Libre Baskerville" }}
+                style={{
+                  fontFamily: "Libre Baskerville",
+                  padding: "20px",
+                  borderBottom: "1px solid #000",
+                }}
               >
                 {props.title}
               </Typography>

@@ -20,18 +20,20 @@ export const Img = styled.img`
   },
 `;
 export const DetailsContainer = styled.div`
-  padding: 40px;
+  // padding: 40px;
   @media (min-width: 0px) {
     margin-inline-start: 0px;
+    padding: 20px;
   }
   @media (min-width: 900px) {
     margin-inline-start: -50px;
     max-width: 500px;
+    padding: 40px;
   }
   position: relative;
-  background-color: #ffffffe6;
+  background-color: white;
   border-style: solid;
   border-width: 1px;
   border-radius: 1px;
-  border-color: #000000;
+  border-color: rgb(204 204 204);
 `;

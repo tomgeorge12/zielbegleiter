@@ -24,15 +24,19 @@ export const Img = styled.img`
 `;
 export const DetailsContainer = styled.div`
   padding: 40px;
+  @media (min-width: 0px) {
+    padding: 20px;
+  }
   @media (min-width: 900px) {
     margin-right: 20px;
     // margin-inline-start: 20px;
     margin-inline-start: 40px;
+    padding: 40px;
   }
   position: relative;
-  background-color: #f1fbff;
+  background-color: white;
   border-style: solid;
-  border-color: #000000 !important;
+  border-color: rgb(204 204 204) !important;
   border-width: 1px;
   border-radius: 1px;
 `;

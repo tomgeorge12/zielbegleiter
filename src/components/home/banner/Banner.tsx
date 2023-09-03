@@ -3,6 +3,11 @@ import styled from "styled-components";
 import BannerInfo from "./BannerInfo";
 import { Grid } from "@mui/material";
 
+// linear-gradient(
+//   to bottom,
+//   rgba(249, 184, 114, 1),
+//   rgba(255, 255, 255, 0.1)
+// ),
 const BannerContainer = styled.div`
   min-height: 100vh;
   display: flex;

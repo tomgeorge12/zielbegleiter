@@ -115,7 +115,7 @@ const ContactForm = () => {
         "@media(min-width: 900px)": {
           padding: "20px 100px",
         },
-        backgroundColor: "#F1FBFF",
+        backgroundColor: "rgb(182, 225, 231)",
         borderRadius: "5px",
         border: "2px dashed black",
       }}

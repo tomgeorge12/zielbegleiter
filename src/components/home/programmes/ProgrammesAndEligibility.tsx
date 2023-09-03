@@ -36,7 +36,9 @@ export const StarList = (props: any) => {
 
 const DetailSection = ({ title, listItems }: any) => {
   return (
-    <Box sx={{ padding: "15px 0px" }}>
+    <Box
+      sx={{ padding: "30px", margin: "20px 0px", backgroundColor: "#b6e1e7" }}
+    >
       {title && (
         <Typography
           variant="h4"
@@ -46,7 +48,7 @@ const DetailSection = ({ title, listItems }: any) => {
         </Typography>
       )}
       <StarList items={listItems} />
-      <Divider light sx={{ borderColor: "white", opacity: "0.6" }} />
+      {/* <Divider light sx={{ borderColor: "white", opacity: "0.6" }} /> */}
     </Box>
   );
 };
@@ -65,7 +67,7 @@ const ProgrammesAndEligibility = () => {
           <Img src={sec2} ref={ref} />
         </AnimateIn>
       </Grid>
-      <Grid item sm={12} md={6}>
+      <Grid item sm={12} md={6} sx={{ padding: "20px 0px" }}>
         <AnimateIn
           type={AnimateTypes.FADE_IN}
           elementPosition={ElementPositionTypes.RIGHT}
