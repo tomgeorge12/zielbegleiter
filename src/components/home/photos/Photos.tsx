@@ -18,7 +18,7 @@ const ImageContainer = styled.div`
 
 const CarouselWrapper = styled.div`
   @media (min-width: 0px) {
-    padding: 5%;
+    padding: 10% 5%;
   }
   @media (min-width: 900px) {
     padding: 5% 26%;

@@ -3,12 +3,17 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   // background: #63D471;
+  @media (min-width: 0px) {
+    position: sticky;
+  }
+  @media (min-width: 900px) {
+    position: fixed;
+  }
   height: 85px;
   display: flex;
   justify-content: space-between;
   padding: 0.2rem calc((100vw - 80vw) / 2);
   z-index: 12;
-  position: fixed;
   width: -webkit-fill-available;
   /* Third Nav */
   /* justify-content: flex-start; */

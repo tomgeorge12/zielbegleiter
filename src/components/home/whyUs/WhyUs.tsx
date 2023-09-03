@@ -15,12 +15,7 @@ const WhyUs = () => {
   return (
     <>
       <CommonBox title={"Our Specialities"}>
-        <Grid
-          item
-          sm={12}
-          md={6}
-          sx={{ maxWidth: "610px !important", padding: "20px 0px" }}
-        >
+        <Grid item sm={12} md={6} sx={{ padding: "20px 0px" }}>
           <AnimateIn
             type={AnimateTypes.SLIDE_IN}
             elementPosition={ElementPositionTypes.RIGHT}

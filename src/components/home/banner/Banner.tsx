@@ -9,7 +9,15 @@ import { Grid } from "@mui/material";
 //   rgba(255, 255, 255, 0.1)
 // ),
 const BannerContainer = styled.div`
+  // @media (min-width: 0px) {
+  //   min-height: auto;
+  // }
+  // @media (min-width: 900px) {
+  //   min-height: 100vh;
+  // }
   min-height: 100vh;
+
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +31,8 @@ const BannerContainer = styled.div`
     background-size: cover;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center center;
+    back
     position: absolute;
     top: 0px;
     right: 0px;
