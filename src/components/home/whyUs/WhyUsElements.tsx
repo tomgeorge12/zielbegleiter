@@ -16,7 +16,7 @@ export const Img = styled.img`
     float: initial;
   }
   @media (min-width: 900px) {
-    // width: 70%;
+    width: 65%;
     // float: right;
   }
   // height: 80%;
@@ -32,6 +32,8 @@ export const DetailsContainer = styled.div`
     // margin-inline-start: 20px;
     margin-inline-start: 40px;
     padding: 40px;
+    width: 65%;
+    float: right;
   }
   position: relative;
   background-color: white;

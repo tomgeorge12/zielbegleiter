@@ -42,7 +42,7 @@ const Home = () => {
         sx={{
           backgroundColor: "#F9B872",
           backgroundImage: "radial-gradient(white, #F9B872)",
-          overflowX: "hidden",
+          overflow: "hidden",
         }}
       >
         <WhyUs />

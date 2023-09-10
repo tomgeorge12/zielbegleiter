@@ -10,7 +10,8 @@ import AnimateIn, {
 } from "../animate/AnimateIn";
 
 const WhyUs = () => {
-  const ref = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const detailsRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -19,8 +20,9 @@ const WhyUs = () => {
           <AnimateIn
             type={AnimateTypes.SLIDE_IN}
             elementPosition={ElementPositionTypes.RIGHT}
+            childRef={detailsRef}
           >
-            <DetailsContainer>
+            <DetailsContainer ref={detailsRef}>
               <div style={{ padding: "30px", backgroundColor: "#b6e1e7" }}>
                 <Typography
                   variant="h4"
@@ -55,9 +57,9 @@ const WhyUs = () => {
           <AnimateIn
             type={AnimateTypes.SLIDE_IN}
             elementPosition={ElementPositionTypes.LEFT}
-            childRef={ref}
+            childRef={imgRef}
           >
-            <Img src={sec3} ref={ref} />
+            <Img src={sec3} ref={imgRef} />
           </AnimateIn>
         </Grid>
       </CommonBox>
