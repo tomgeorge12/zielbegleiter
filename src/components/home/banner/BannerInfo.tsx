@@ -49,8 +49,13 @@ const BannerInfo = () => {
           <Paper
             elevation={0}
             sx={{
+              "@media(min-width: 0px)": {
+                padding: "40px 34px",
+              },
+              "@media(min-width: 900px)": {
+                padding: "40px 0px",
+              },
               marginTop: "40px",
-              padding: "40px 0px",
               opacity: "0.7",
               fontFamily: "Poppins",
             }}
