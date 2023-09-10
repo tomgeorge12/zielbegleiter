@@ -40,10 +40,10 @@ const ContactForm = () => {
     };
     emailjs
       .send(
-        "service_7aofpu4",
-        "template_5z2c63d",
+        "service_gpxwks7",
+        "template_4tlhwfm",
         templateParams,
-        "RsdJ03dg9KWj7T6do"
+        "rwaZGbTlH-PGyMueA"
       )
       .then((response) => setShowAlert(true))
       .catch((error) => {
