@@ -21,7 +21,17 @@ const Icon = styled.div`
 export const StarList = (props: any) => {
   const { icon, items } = props;
   return (
-    <List sx={{ paddingLeft: "20px", fontFamily: "'Poppins' !important" }}>
+    <List
+      sx={{
+        "@media(min-width: 0px)": {
+          paddingLeft: "0px",
+        },
+        "@media(min-width: 900px)": {
+          paddingLeft: "20px",
+        },
+        fontFamily: "'Poppins' !important",
+      }}
+    >
       {items.map((item: any) => {
         return (
           <ListItem key={item} disablePadding>
@@ -37,7 +47,16 @@ export const StarList = (props: any) => {
 const DetailSection = ({ title, listItems }: any) => {
   return (
     <Box
-      sx={{ padding: "30px", margin: "20px 0px", backgroundColor: "#b6e1e7" }}
+      sx={{
+        "@media(min-width: 0px)": {
+          padding: "18px",
+        },
+        "@media(min-width: 900px)": {
+          padding: "30px",
+        },
+        margin: "20px 0px",
+        backgroundColor: "#b6e1e7",
+      }}
     >
       {title && (
         <Typography

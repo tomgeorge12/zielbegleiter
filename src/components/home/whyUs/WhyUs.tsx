@@ -23,7 +23,17 @@ const WhyUs = () => {
             childRef={detailsRef}
           >
             <DetailsContainer ref={detailsRef}>
-              <div style={{ padding: "30px", backgroundColor: "#b6e1e7" }}>
+              <Box
+                sx={{
+                  "@media(min-width: 0px)": {
+                    padding: "18px",
+                  },
+                  "@media(min-width: 900px)": {
+                    padding: "30px",
+                  },
+                  backgroundColor: "#b6e1e7",
+                }}
+              >
                 <Typography
                   variant="h4"
                   sx={{
@@ -49,7 +59,7 @@ const WhyUs = () => {
                     ]}
                   />
                 </Box>
-              </div>
+              </Box>
             </DetailsContainer>
           </AnimateIn>
         </Grid>

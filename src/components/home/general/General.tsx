@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import sec1 from "../../../images/sec1.jpg";
 import { Img, DetailsContainer } from "./GeneralElements";
-import { Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import CommonBox from "../../layout/CommonBox";
 import AnimateIn, {
   AnimateTypes,
@@ -37,7 +37,17 @@ const General = () => {
           elementPosition={ElementPositionTypes.RIGHT}
         >
           <DetailsContainer>
-            <div style={{ padding: "30px", backgroundColor: "#b6e1e7" }}>
+            <Box
+              sx={{
+                "@media(min-width: 0px)": {
+                  padding: "18px",
+                },
+                "@media(min-width: 900px)": {
+                  padding: "30px",
+                },
+                backgroundColor: "#b6e1e7",
+              }}
+            >
               <Typography
                 variant="h4"
                 sx={{
@@ -76,7 +86,7 @@ const General = () => {
                 Moreover, students could find attractive job opportunities and
                 get into job based on the educational eligibility.
               </Typography>
-            </div>
+            </Box>
           </DetailsContainer>
         </AnimateIn>
       </Grid>
