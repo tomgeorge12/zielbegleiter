@@ -5,11 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(
+  @media (min-width: 0px) {
+    background-image: url('./images/banner.jpg');
+  }
+  @media (min-width: 900px) {
+    background-image: linear-gradient(
       to bottom,
       rgb(247, 196, 141, 0.9),
       rgba(255, 255, 255, 0.1)
      ), url('./images/banner.jpg');
+  }
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

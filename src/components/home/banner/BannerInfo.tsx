@@ -3,7 +3,13 @@ import { Grid, Paper, Typography } from "@mui/material";
 import AnimateIn, { AnimateTypes } from "../animate/AnimateIn";
 
 const HeaderText = styled.span`
-  color: ${(props) => props.color};
+  @media (min-width: 0px) {
+    color: white;
+  }
+  @media (min-width: 900px) {
+    color: ${(props) => props.color};
+  }
+  // color: ${(props) => props.color};
   font-weight: 500 !important;
   position: relative;
   font-family: Libre Baskerville;
