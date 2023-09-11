@@ -8,7 +8,7 @@ import Photos from "../components/home/photos/Photos";
 import ProgrammesAndEligibility from "../components/home/programmes/ProgrammesAndEligibility";
 import WhyUs from "../components/home/whyUs/WhyUs";
 import Footer from "../components/home/footer/Footer";
-import FloatingContactForm from "../components/home/floatingContactForm/FloatingContactForm";
+import FloatingSocialContent from "../components/home/floatingSocialContent/FloatingSocialContent";
 
 const Home = () => {
   return (
@@ -63,7 +63,7 @@ const Home = () => {
       <Grid item xs={12} sx={{ backgroundColor: "#212730", color: "white" }}>
         <Footer />
       </Grid>
-      {/* <FloatingContactForm /> */}
+      {/* <FloatingSocialContent /> */}
     </Grid>
   );
 };

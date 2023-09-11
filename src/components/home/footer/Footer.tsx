@@ -3,6 +3,7 @@ import logo from "../../../images/zb-logo.png";
 import { Logo } from "../../navbar/NavbarElements";
 import { CommonTypography, LogoWrapper, Link } from "./FooterElements";
 import { StarList } from "../programmes/ProgrammesAndEligibility";
+import FloatingSocialContent from "../floatingSocialContent/FloatingSocialContent";
 
 const Footer = () => {
   return (
@@ -69,6 +70,7 @@ const Footer = () => {
           <CommonTypography>+91 96 45 828 929</CommonTypography>
           <CommonTypography>+91 97 45 828 929</CommonTypography>
           <CommonTypography>+91 49 35 220 929</CommonTypography>
+          <FloatingSocialContent />
         </Box>
       </Grid>
       <Grid item sm={12} md={4}>
