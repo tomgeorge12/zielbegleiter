@@ -30,9 +30,7 @@ const BannerContainer = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-size: cover;
     background-position: center center;
-    back
     position: absolute;
     top: 0px;
     right: 0px;
