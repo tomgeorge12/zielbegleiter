@@ -1,11 +1,14 @@
 import { Box, Grid, Typography } from "@mui/material";
-import logo from "../../../images/zb-logo.png";
+import logo from "../../../assets/logo/zb-logo.png";
 import { Logo } from "../../navbar/NavbarElements";
-import { CommonTypography, LogoWrapper, Link } from "./FooterElements";
-import { StarList } from "../programmes/ProgrammesAndEligibility";
 import FloatingSocialContent from "../floatingSocialContent/FloatingSocialContent";
+import { StarList } from "../programmes/ProgrammesAndEligibility";
+import { CommonTypography, Link, LogoWrapper } from "./FooterElements";
+import useLocale from "../../../hooks/useLocale";
 
 const Footer = () => {
+  const { translate } = useLocale();
+
   return (
     <Grid
       container
@@ -28,7 +31,7 @@ const Footer = () => {
           <LogoWrapper>
             <Logo src={logo} />
             <Typography variant="h5" sx={{ fontFamily: "Inter" }}>
-              ziel begleiter
+              {translate("ZIEL_BEGLEITER")}
             </Typography>
           </LogoWrapper>
           <Box
@@ -37,15 +40,14 @@ const Footer = () => {
             }}
           >
             <Typography variant="h6" sx={{ fontFamily: "Poppins" }}>
-              The Real Companionship
+              {translate("REAL_COMPANIONSHIP")}
             </Typography>
-
             <StarList
               items={[
-                "Course and University Selection",
-                "Paper Works",
-                "Application Processing",
-                "Airport Pickups, Accommodation",
+                translate("REAL_COMPANIONSHIP_PT_1"),
+                translate("REAL_COMPANIONSHIP_PT_2"),
+                translate("REAL_COMPANIONSHIP_PT_3"),
+                translate("REAL_COMPANIONSHIP_PT_4"),
               ]}
             />
           </Box>
@@ -61,15 +63,13 @@ const Footer = () => {
           }}
         >
           <Typography variant="h6" sx={{ fontFamily: "Poppins" }}>
-            Contact Details
+            {translate("CONTACT_DETAILS")}
           </Typography>
-          <CommonTypography>
-            Mannolikkal Building, Panamaram, Wayanad, Kerala, India. Pin: 670721
-          </CommonTypography>
-          <CommonTypography>info@zielbegleiter.org</CommonTypography>
-          <CommonTypography>+91 96 45 828 929</CommonTypography>
-          <CommonTypography>+91 97 45 828 929</CommonTypography>
-          <CommonTypography>+91 49 35 220 929</CommonTypography>
+          <CommonTypography>{translate("FULL_ADDRESS")}</CommonTypography>
+          <CommonTypography>{translate("MAIL_INFO")}</CommonTypography>
+          <CommonTypography>{translate("PHONE1")}</CommonTypography>
+          <CommonTypography>{translate("PHONE2")}</CommonTypography>
+          <CommonTypography>{translate("PHONE3")}</CommonTypography>
           <FloatingSocialContent />
         </Box>
       </Grid>
@@ -83,10 +83,10 @@ const Footer = () => {
           }}
         >
           <Typography variant="h6" sx={{ fontFamily: "Poppins" }}>
-            Quick Links
+            {translate("QUICK_LINKS")}
           </Typography>
-          <Link to="/home">Home</Link>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/home">{translate("HOME")}</Link>
+          <Link to="/contact">{translate("CONTACT_US")}</Link>
         </Box>
       </Grid>
       <Typography
@@ -98,7 +98,7 @@ const Footer = () => {
           fontFamily: "Poppins",
         }}
       >
-        ©Copyright | ziel begleiter 2023. All Right Reserved.
+        {translate("COPY_RIGHT")}
       </Typography>
     </Grid>
   );

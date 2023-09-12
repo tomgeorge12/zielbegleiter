@@ -1,21 +1,23 @@
-import React, { useRef } from "react";
-import sec3 from "../../../images/Sec3.jpg";
-import { Img, DetailsContainer } from "./WhyUsElements";
 import { Box, Grid, Typography } from "@mui/material";
+import { useRef } from "react";
+import sec3 from "../../../assets/images/Sec3.jpg";
 import CommonBox from "../../layout/CommonBox";
-import { StarList } from "../programmes/ProgrammesAndEligibility";
 import AnimateIn, {
   AnimateTypes,
   ElementPositionTypes,
 } from "../animate/AnimateIn";
+import { StarList } from "../programmes/ProgrammesAndEligibility";
+import { DetailsContainer, Img } from "./WhyUsElements";
+import useLocale from "../../../hooks/useLocale";
 
 const WhyUs = () => {
   const imgRef = useRef<HTMLImageElement>(null);
   const detailsRef = useRef<HTMLDivElement>(null);
+  const { translate } = useLocale();
 
   return (
     <>
-      <CommonBox title={"Our Specialities"}>
+      <CommonBox title={translate("OUR_SPECIALITIES")}>
         <Grid item sm={12} md={6} sx={{ padding: "20px 0px" }}>
           <AnimateIn
             type={AnimateTypes.SLIDE_IN}
@@ -41,21 +43,21 @@ const WhyUs = () => {
                     fontFamily: "Libre Baskerville",
                   }}
                 >
-                  Why ziel begleiter...?
+                  {translate("WHY_ZB")}
                 </Typography>
                 <Typography variant="body1" sx={{ fontFamily: "Poppins" }}>
-                  In your journey towards your dreams,
+                  {translate("WHY_ZB_PARA_1")}
                 </Typography>
                 <Box sx={{ padding: "15px 0px" }}>
                   <StarList
                     items={[
-                      "ziel begleiter accompanies you like a real companion",
-                      "Provides support right from the beginning till the end of your education",
-                      "Provides assistance in each and every steps",
-                      "Complete assistance for selecting career goals, courses, university,...",
-                      "Help of experienced people",
-                      "Arranges airport pickups, accommodation facilities, city registration, account opening,...",
-                      "Provides job assistance",
+                      translate("WHY_ZB_LIST_PT_1"),
+                      translate("WHY_ZB_LIST_PT_2"),
+                      translate("WHY_ZB_LIST_PT_3"),
+                      translate("WHY_ZB_LIST_PT_4"),
+                      translate("WHY_ZB_LIST_PT_5"),
+                      translate("WHY_ZB_LIST_PT_6"),
+                      translate("WHY_ZB_LIST_PT_7"),
                     ]}
                   />
                 </Box>

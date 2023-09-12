@@ -1,6 +1,4 @@
-import { Fab, Grid } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
-import "../App.css";
+import { Grid } from "@mui/material";
 import Banner from "../components/home/banner/Banner";
 import ContactForm from "../components/home/contactForm/ContactForm";
 import General from "../components/home/general/General";
@@ -8,7 +6,6 @@ import Photos from "../components/home/photos/Photos";
 import ProgrammesAndEligibility from "../components/home/programmes/ProgrammesAndEligibility";
 import WhyUs from "../components/home/whyUs/WhyUs";
 import Footer from "../components/home/footer/Footer";
-import FloatingSocialContent from "../components/home/floatingSocialContent/FloatingSocialContent";
 
 const Home = () => {
   return (
@@ -19,7 +16,7 @@ const Home = () => {
       <Grid
         item
         xs={12}
-        style={{
+        sx={{
           overflowX: "hidden",
           backgroundImage: "radial-gradient(white, #F9B872)",
         }}
@@ -30,7 +27,7 @@ const Home = () => {
         item
         xs={12}
         sx={{
-          backgroundColor: "#F9B872",
+          // backgroundColor: "#F9B872",
           backgroundImage: "radial-gradient(white, #F9B872)",
         }}
       >
@@ -40,7 +37,7 @@ const Home = () => {
         item
         xs={12}
         sx={{
-          backgroundColor: "#F9B872",
+          // backgroundColor: "#F9B872",
           backgroundImage: "radial-gradient(white, #F9B872)",
           overflow: "hidden",
         }}
@@ -51,7 +48,7 @@ const Home = () => {
         item
         xs={12}
         sx={{
-          backgroundColor: "#F9B872",
+          // backgroundColor: "#F9B872",
           backgroundImage: "radial-gradient(white, #F9B872)",
         }}
       >
@@ -63,7 +60,6 @@ const Home = () => {
       <Grid item xs={12} sx={{ backgroundColor: "#212730", color: "white" }}>
         <Footer />
       </Grid>
-      {/* <FloatingSocialContent /> */}
     </Grid>
   );
 };

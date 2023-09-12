@@ -1,35 +1,28 @@
-import React, { useRef } from "react";
-import sec1 from "../../../images/sec1.jpg";
-import { Img, DetailsContainer } from "./GeneralElements";
 import { Box, Divider, Grid, Typography } from "@mui/material";
+import { useRef } from "react";
+import sec1 from "../../../assets/images/sec1.jpg";
 import CommonBox from "../../layout/CommonBox";
 import AnimateIn, {
   AnimateTypes,
   ElementPositionTypes,
 } from "../animate/AnimateIn";
+import { DetailsContainer, Img } from "./GeneralElements";
+import useLocale from "../../../hooks/useLocale";
 
 const General = () => {
   const ref = useRef<HTMLImageElement>(null);
+  const { translate } = useLocale();
+
   return (
     <CommonBox>
       <Grid item sm={12} md={6}>
-        <div
-          style={
-            {
-              // padding: "30px",
-              // backgroundColor: "white",
-              // height: ref.current?.height,
-            }
-          }
+        <AnimateIn
+          type={AnimateTypes.SLIDE_IN}
+          elementPosition={ElementPositionTypes.LEFT}
+          childRef={ref}
         >
-          <AnimateIn
-            type={AnimateTypes.SLIDE_IN}
-            elementPosition={ElementPositionTypes.LEFT}
-            childRef={ref}
-          >
-            <Img src={sec1} ref={ref} />
-          </AnimateIn>
-        </div>
+          <Img src={sec1} ref={ref} />
+        </AnimateIn>
       </Grid>
       <Grid item sm={12} md={6} sx={{ padding: "20px 0px" }}>
         <AnimateIn
@@ -57,7 +50,7 @@ const General = () => {
                   fontFamily: "Libre Baskerville",
                 }}
               >
-                Higher Education in Germany...
+                {translate("HIGHER_ED_IN_GERMANY")}
               </Typography>
               <Divider />
               <Typography
@@ -67,24 +60,17 @@ const General = () => {
                   fontFamily: "Poppins",
                 }}
               >
-                Pursuing education from a technically and technologically
-                developed country and improving the living standards are the
-                very basic dreams of a student. Germany offers a higher
-                education system which is specially renowned for its high
-                quality standards and excellent reputations. Thus an eligible
-                student finds great oppurtunity to do higher education
-                programmes from the Top Ranked Universities with:
+                {translate("HIGHER_ED_IN_GERMANY_PARA_1")}
               </Typography>
               <ul style={{ fontWeight: "600", fontFamily: "Poppins" }}>
-                <li>100% scholarship opportunities</li>
-                <li>Tution fees free education</li>
-                <li>Part time job opportunities (20 hours per week)</li>
-                <li>Monthly stipend for Ausbildung and Diploma programmes</li>
-                <li>Intercultural communication</li>
+                <li>{translate("HIGHER_ED_IN_GERMANY_LIST_1")}</li>
+                <li>{translate("HIGHER_ED_IN_GERMANY_LIST_2")}</li>
+                <li>{translate("HIGHER_ED_IN_GERMANY_LIST_3")}</li>
+                <li>{translate("HIGHER_ED_IN_GERMANY_LIST_4")}</li>
+                <li>{translate("HIGHER_ED_IN_GERMANY_LIST_5")}</li>
               </ul>
               <Typography variant="body1" sx={{ fontFamily: "Poppins" }}>
-                Moreover, students could find attractive job opportunities and
-                get into job based on the educational eligibility.
+                {translate("HIGHER_ED_IN_GERMANY_PARA_2")}
               </Typography>
             </Box>
           </DetailsContainer>

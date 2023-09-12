@@ -79,7 +79,7 @@ const ContactForm = () => {
     let isValid = true;
     let message = "";
     const regEx =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!value || !regEx.test(String(value).toLowerCase())) {
       isValid = false;
       message = translate("EMAIL_VALIDATION_ERROR");
@@ -96,7 +96,7 @@ const ContactForm = () => {
     const value = e.target.value;
     let isValid = true;
     let message = "";
-    const regEx = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+    const regEx = /^(\+91[-\s]?)?[0]?(91)?[789]\d{9}$/;
     if (!value || !regEx.test(value)) {
       isValid = false;
       message = translate("PHONE_VALIDATION_ERROR");

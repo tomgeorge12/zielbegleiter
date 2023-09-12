@@ -1,6 +1,5 @@
 import React from "react";
 import sec1 from "../../../sec1.jpeg";
-// import { Img, DetailsContainer } from './Elements';
 import { Box, Container } from "@mui/material";
 
 const General = (props: any) => {

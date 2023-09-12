@@ -1,14 +1,9 @@
 import styled from "styled-components";
 import { Grid, Paper, Typography } from "@mui/material";
 import AnimateIn, { AnimateTypes } from "../animate/AnimateIn";
+import useLocale from "../../../hooks/useLocale";
 
 const HeaderText = styled.span`
-  // @media (min-width: 0px) {
-  //   color: white;
-  // }
-  // @media (min-width: 900px) {
-  //   color: ${(props) => props.color};
-  // }
   color: ${(props) => props.color};
   font-weight: 500 !important;
   position: relative;
@@ -24,6 +19,8 @@ const ParagraphText = styled(Typography)`
 `;
 
 const BannerInfo = () => {
+  const { translate } = useLocale();
+
   return (
     <Grid
       container
@@ -44,9 +41,11 @@ const BannerInfo = () => {
       >
         <AnimateIn type={AnimateTypes.FADE_IN}>
           <HeaderText color={"#212730"}>
-            {"ziel "}
-            <span style={{ color: "#ea7704" }}>{"colors "}</span>
-            {"your dreams"}
+            {`${translate("ZIEL")} `}
+            <span style={{ color: "#ea7704" }}>{`${translate(
+              "COLORS"
+            )} `}</span>
+            {`${translate("YOUR_DREAMS")}`}
           </HeaderText>
         </AnimateIn>
       </Grid>
@@ -66,14 +65,11 @@ const BannerInfo = () => {
               fontFamily: "Poppins",
             }}
           >
-            <ParagraphText>
-              Are You Looking to Study or Work in Germany...
-            </ParagraphText>
+            <ParagraphText>{translate("BANNER_PARA_1")}</ParagraphText>
             <ParagraphText sx={{ color: "rgb(234, 119, 4)" }}>
-              Here The Real Companion is With You...
+              {translate("BANNER_PARA_2")}
             </ParagraphText>
-
-            <ParagraphText>To Accompany You...</ParagraphText>
+            <ParagraphText>{translate("BANNER_PARA_3")}</ParagraphText>
           </Paper>
         </AnimateIn>
       </Grid>

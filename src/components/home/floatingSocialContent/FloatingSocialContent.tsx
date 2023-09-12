@@ -1,13 +1,7 @@
-import React from "react";
-import Fab from "@mui/material/Fab";
-import AddIcon from "@mui/icons-material/Add";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import styled from "styled-components";
-import ContactForm from "../contactForm/ContactForm";
-import Fb from "../../../images/fb.png";
-import Insta from "../../../images/insta.png";
-import Mail from "../../../images/mail.png";
+import Fb from "../../../assets/logo/fb.png";
+import Insta from "../../../assets/logo/insta.png";
+import Mail from "../../../assets/logo/mail.png";
 
 const FloatingSection = styled.div`
   @media (min-width: 0px) {
@@ -47,8 +41,6 @@ export default function FloatingSocialContent() {
 
   return (
     <FloatingSection>
-      {/* <Fab color="primary" aria-label="add" onClick={handleClick}> */}
-      {/* <AddIcon /> */}
       <Icon
         src={Insta}
         onClick={() => {
@@ -67,7 +59,6 @@ export default function FloatingSocialContent() {
           handleClick(Links.fb);
         }}
       />
-      {/* </Fab> */}
     </FloatingSection>
   );
 }

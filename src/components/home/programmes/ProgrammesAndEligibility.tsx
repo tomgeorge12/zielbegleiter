@@ -1,25 +1,21 @@
-import React, { useRef } from "react";
 import AdjustIcon from "@mui/icons-material/Adjust";
-import sec2 from "../../../images/Sec2.jpg";
-import {
-  Img,
-  DetailsContainer,
-  StyledListItemText,
-} from "./ProgrammesAndEligibilityElements";
-import { Box, Divider, Grid, List, ListItem, Typography } from "@mui/material";
+import { Box, Grid, List, ListItem, Typography } from "@mui/material";
+import { useRef } from "react";
+import sec2 from "../../../assets/images/Sec2.jpg";
 import CommonBox from "../../layout/CommonBox";
-import styled from "styled-components";
 import AnimateIn, {
   AnimateTypes,
   ElementPositionTypes,
 } from "../animate/AnimateIn";
-
-const Icon = styled.div`
-  width: 10px;
-`;
+import {
+  DetailsContainer,
+  Img,
+  StyledListItemText,
+} from "./ProgrammesAndEligibilityElements";
+import useLocale from "../../../hooks/useLocale";
 
 export const StarList = (props: any) => {
-  const { icon, items } = props;
+  const { items } = props;
   return (
     <List
       sx={{
@@ -67,16 +63,16 @@ const DetailSection = ({ title, listItems }: any) => {
         </Typography>
       )}
       <StarList items={listItems} />
-      {/* <Divider light sx={{ borderColor: "white", opacity: "0.6" }} /> */}
     </Box>
   );
 };
 
 const ProgrammesAndEligibility = () => {
   const ref = useRef<HTMLImageElement>(null);
+  const { translate } = useLocale();
 
   return (
-    <CommonBox title={"Programmes & Eligibility"}>
+    <CommonBox title={translate("PROGRAMMES_ELIGIBILITY")}>
       <Grid item sm={12} md={6}>
         <AnimateIn
           type={AnimateTypes.FADE_IN}
@@ -93,43 +89,43 @@ const ProgrammesAndEligibility = () => {
         >
           <DetailsContainer>
             <DetailSection
-              title={"Bachelors Degree"}
+              title={translate("BACHELORS_DEGREE")}
               listItems={[
-                "13 years of education",
-                "12th Grade: 60% Marks",
-                "IELTS Score: Minimum 5.5 Band",
-                "German Language: A2 Level",
-                "Age Limit: 30 Years",
-                "Completed Bachelors from a Reputed University",
-                "Completed 2 Semesters of Bachelors Degree and attend Testas Examination",
-                "Attend Studienkolleg Course",
+                translate("13_YRS_EDU"),
+                translate("12_TH_60_MARKS"),
+                translate("IELTS_5_5"),
+                translate("GERMAN_A2"),
+                translate("AGE_30"),
+                translate("COMPLETED_BACHELORS"),
+                translate("COMPLTED_BACHELORS_TESTAS"),
+                translate("ATTEND_STUDIENKOLLEG"),
               ]}
             />
             <DetailSection
-              title={"Masters Degree"}
+              title={translate("MASTERS_DEGREE")}
               listItems={[
-                "Bachelors Degree with 76% marks from a reputed university",
-                "IELTS Score: Minimum 6 Band",
-                "German Language: A2 Level",
-                "Age Limit: 30 Years",
+                translate("BACHELORS_76_MARKS"),
+                translate("IELTS_6"),
+                translate("GERMAN_A2"),
+                translate("AGE_30"),
               ]}
             />
             <DetailSection
-              title={"Ausbildung Programmes"}
+              title={translate("AUSBILUNG_PROGRAMMES")}
               listItems={[
-                "12th Grade: 60% Marks",
-                "German Language: B2 Level",
-                "Age Limit: 30 Years",
-                "Duration: 2-4 Years",
+                translate("12_TH_60_MARKS"),
+                translate("GERMAN_B2"),
+                translate("AGE_30"),
+                translate("DURATION_2_4"),
               ]}
             />
             <DetailSection
-              title={"Diploma Programmes"}
+              title={translate("DIPLOMA_PROGRAMMES")}
               listItems={[
-                "12th Grade: 60% Marks",
-                "German Language: B2 Level",
-                "Age Limit: 30 Years",
-                "Duration: 3 Years",
+                translate("12_TH_60_MARKS"),
+                translate("GERMAN_B2"),
+                translate("AGE_30"),
+                translate("DURATION_3"),
               ]}
             />
           </DetailsContainer>

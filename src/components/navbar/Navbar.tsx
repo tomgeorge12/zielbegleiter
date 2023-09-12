@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Nav, NavLink, NavMenu, Logo } from "./NavbarElements";
-import logo from "../../images/zb-logo.png";
-import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import useScrollListener from "../../hooks/useScrollListener";
+import logo from "../../assets/logo/zb-logo.png";
+import { Logo, Nav, NavLink, NavMenu } from "./NavbarElements";
+import useLocale from "../../hooks/useLocale";
 
 const Navbar = () => {
+  const { translate } = useLocale();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -30,7 +32,7 @@ const Navbar = () => {
   }, [scroll.y, scroll.lastY]);
 
   const getSelectedStyle = (item: string) => {
-    if (route == item) {
+    if (route === item) {
       return {
         borderBottom: "2px solid rgb(11, 56, 102)",
         color: "rgb(0, 0, 0)",
@@ -44,7 +46,7 @@ const Navbar = () => {
       <NavMenu>
         <Logo src={logo} />
         <Typography variant="h5" sx={{ fontFamily: "Inter" }}>
-          ziel begleiter
+          {translate("ZIEL_BEGLEITER")}
         </Typography>
       </NavMenu>
       <NavMenu>
@@ -80,10 +82,10 @@ const Navbar = () => {
             }}
           >
             <MenuItem onClick={handleCloseNavMenu}>
-              <NavLink to="/home">Home</NavLink>
+              <NavLink to="/home">{translate("HOME")}</NavLink>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <NavLink to="/contact">Contact Us</NavLink>
+              <NavLink to="/contact">{translate("CONTACT_US")}</NavLink>
             </MenuItem>
           </Menu>
         </Box>
@@ -99,14 +101,14 @@ const Navbar = () => {
             onClick={() => setRoute("home")}
             style={getSelectedStyle("home")}
           >
-            Home
+            {translate("HOME")}
           </NavLink>
           <NavLink
             to="/contact"
             onClick={() => setRoute("contact")}
             style={getSelectedStyle("contact")}
           >
-            Contact Us
+            {translate("CONTACT_US")}
           </NavLink>
         </Box>
       </NavMenu>
