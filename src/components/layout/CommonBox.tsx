@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, GridLegacy, Typography } from "@mui/material";
 import AnimateIn, {
   AnimateTypes,
   ElementPositionTypes,
@@ -6,7 +6,7 @@ import AnimateIn, {
 
 const General = (props: any) => {
   return (
-    <Grid
+    <GridLegacy
       container
       direction="row"
       justifyContent="center"
@@ -22,7 +22,7 @@ const General = (props: any) => {
       }}
     >
       {props.title && (
-        <Grid item xs={7}>
+        <GridLegacy item xs={7}>
           <AnimateIn
             type={AnimateTypes.FADE_IN}
             elementPosition={ElementPositionTypes.RIGHT}
@@ -47,9 +47,9 @@ const General = (props: any) => {
               </Typography>
             </Box>
           </AnimateIn>
-        </Grid>
+        </GridLegacy>
       )}
-      <Grid item>
+      <GridLegacy item>
         <Box
           sx={{
             minHeight: "calc(100vh-60px)",
@@ -63,8 +63,8 @@ const General = (props: any) => {
         >
           {props.children}
         </Box>
-      </Grid>
-    </Grid>
+      </GridLegacy>
+    </GridLegacy>
   );
 };
 

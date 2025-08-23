@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { GridLegacy } from "@mui/material";
 import styled from "styled-components";
 import ContactForm from "../components/home/contactForm/ContactForm";
 import Footer from "../components/home/footer/Footer";
@@ -22,7 +22,7 @@ const Container = styled.div`
 
 function Contact() {
   return (
-    <Grid
+    <GridLegacy
       container
       direction="row"
       justifyContent="center"
@@ -32,7 +32,7 @@ function Contact() {
         backgroundImage: "radial-gradient(white, #F9B872)",
       }}
     >
-      <Grid
+      <GridLegacy
         item
         xs={12}
         sx={{ backgroundColor: "#0B3866", padding: "10px", marginTop: "100px" }}
@@ -44,8 +44,8 @@ function Contact() {
         // }}
       >
         <ContactForm />
-      </Grid>
-      <Grid
+      </GridLegacy>
+      <GridLegacy
         item
         xs={12}
         sx={
@@ -64,11 +64,11 @@ function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </Container>
-      </Grid>
-      <Grid item xs={12} sx={{ backgroundColor: "#212730", color: "white" }}>
+      </GridLegacy>
+      <GridLegacy item xs={12} sx={{ backgroundColor: "#212730", color: "white" }}>
         <Footer />
-      </Grid>
-    </Grid>
+      </GridLegacy>
+    </GridLegacy>
   );
 }
 

@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, GridLegacy, Typography } from "@mui/material";
 import { useRef } from "react";
 import sec1 from "../../../assets/images/sec1.jpg";
 import CommonBox from "../../layout/CommonBox";
@@ -15,7 +15,7 @@ const General = () => {
 
   return (
     <CommonBox>
-      <Grid item sm={12} md={6}>
+      <GridLegacy item sm={12} md={6}>
         <AnimateIn
           type={AnimateTypes.SLIDE_IN}
           elementPosition={ElementPositionTypes.LEFT}
@@ -23,8 +23,8 @@ const General = () => {
         >
           <Img src={sec1} ref={ref} />
         </AnimateIn>
-      </Grid>
-      <Grid item sm={12} md={6} sx={{ padding: "20px 0px" }}>
+      </GridLegacy>
+      <GridLegacy item sm={12} md={6} sx={{ padding: "20px 0px" }}>
         <AnimateIn
           type={AnimateTypes.SLIDE_IN}
           elementPosition={ElementPositionTypes.RIGHT}
@@ -75,7 +75,7 @@ const General = () => {
             </Box>
           </DetailsContainer>
         </AnimateIn>
-      </Grid>
+      </GridLegacy>
     </CommonBox>
   );
 };

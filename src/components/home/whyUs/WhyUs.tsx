@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, GridLegacy, Typography } from "@mui/material";
 import { useRef } from "react";
 import sec3 from "../../../assets/images/Sec3.jpg";
 import CommonBox from "../../layout/CommonBox";
@@ -18,7 +18,7 @@ const WhyUs = () => {
   return (
     <>
       <CommonBox title={translate("OUR_SPECIALITIES")}>
-        <Grid item sm={12} md={6} sx={{ padding: "20px 0px" }}>
+        <GridLegacy item sm={12} md={6} sx={{ padding: "20px 0px" }}>
           <AnimateIn
             type={AnimateTypes.SLIDE_IN}
             elementPosition={ElementPositionTypes.RIGHT}
@@ -64,8 +64,8 @@ const WhyUs = () => {
               </Box>
             </DetailsContainer>
           </AnimateIn>
-        </Grid>
-        <Grid item sm={12} md={6}>
+        </GridLegacy>
+        <GridLegacy item sm={12} md={6}>
           <AnimateIn
             type={AnimateTypes.SLIDE_IN}
             elementPosition={ElementPositionTypes.LEFT}
@@ -73,7 +73,7 @@ const WhyUs = () => {
           >
             <Img src={sec3} ref={imgRef} />
           </AnimateIn>
-        </Grid>
+        </GridLegacy>
       </CommonBox>
     </>
   );

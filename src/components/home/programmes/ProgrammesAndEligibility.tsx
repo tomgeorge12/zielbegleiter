@@ -1,5 +1,5 @@
 import AdjustIcon from "@mui/icons-material/Adjust";
-import { Box, Grid, List, ListItem, Typography } from "@mui/material";
+import { Box, GridLegacy, List, ListItem, Typography } from "@mui/material";
 import { useRef } from "react";
 import sec2 from "../../../assets/images/Sec2.jpg";
 import CommonBox from "../../layout/CommonBox";
@@ -73,7 +73,7 @@ const ProgrammesAndEligibility = () => {
 
   return (
     <CommonBox title={translate("PROGRAMMES_ELIGIBILITY")}>
-      <Grid item sm={12} md={6}>
+      <GridLegacy item sm={12} md={6}>
         <AnimateIn
           type={AnimateTypes.FADE_IN}
           elementPosition={ElementPositionTypes.LEFT}
@@ -81,8 +81,8 @@ const ProgrammesAndEligibility = () => {
         >
           <Img src={sec2} ref={ref} />
         </AnimateIn>
-      </Grid>
-      <Grid item sm={12} md={6} sx={{ padding: "20px 0px" }}>
+      </GridLegacy>
+      <GridLegacy item sm={12} md={6} sx={{ padding: "20px 0px" }}>
         <AnimateIn
           type={AnimateTypes.FADE_IN}
           elementPosition={ElementPositionTypes.RIGHT}
@@ -130,7 +130,7 @@ const ProgrammesAndEligibility = () => {
             />
           </DetailsContainer>
         </AnimateIn>
-      </Grid>
+      </GridLegacy>
     </CommonBox>
   );
 };

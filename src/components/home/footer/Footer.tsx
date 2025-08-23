@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, GridLegacy, Typography } from "@mui/material";
 import logo from "../../../assets/logo/zb-logo.png";
 import { Logo } from "../../navbar/NavbarElements";
 import FloatingSocialContent from "../floatingSocialContent/FloatingSocialContent";
@@ -10,7 +10,7 @@ const Footer = () => {
   const { translate } = useLocale();
 
   return (
-    <Grid
+    <GridLegacy
       container
       direction="row"
       sx={{
@@ -19,7 +19,7 @@ const Footer = () => {
         },
       }}
     >
-      <Grid item sm={12} md={5}>
+      <GridLegacy item sm={12} md={5}>
         <Box
           sx={{
             "@media(min-width: 900px)": {
@@ -52,8 +52,8 @@ const Footer = () => {
             />
           </Box>
         </Box>
-      </Grid>
-      <Grid item sm={12} md={3}>
+      </GridLegacy>
+      <GridLegacy item sm={12} md={3}>
         <Box
           sx={{
             "@media(min-width: 900px)": {
@@ -72,8 +72,8 @@ const Footer = () => {
           <CommonTypography>{translate("PHONE3")}</CommonTypography>
           <FloatingSocialContent />
         </Box>
-      </Grid>
-      <Grid item sm={12} md={4}>
+      </GridLegacy>
+      <GridLegacy item sm={12} md={4}>
         <Box
           sx={{
             "@media(min-width: 900px)": {
@@ -88,7 +88,7 @@ const Footer = () => {
           <Link to="/home">{translate("HOME")}</Link>
           <Link to="/contact">{translate("CONTACT_US")}</Link>
         </Box>
-      </Grid>
+      </GridLegacy>
       <Typography
         variant="caption"
         sx={{
@@ -100,7 +100,7 @@ const Footer = () => {
       >
         {translate("COPY_RIGHT")}
       </Typography>
-    </Grid>
+    </GridLegacy>
   );
 };
 
