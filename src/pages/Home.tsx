@@ -27,7 +27,6 @@ const Home = () => {
         item
         xs={12}
         sx={{
-          // backgroundColor: "#F9B872",
           backgroundImage: "radial-gradient(white, #F9B872)",
         }}
       >
@@ -37,7 +36,6 @@ const Home = () => {
         item
         xs={12}
         sx={{
-          // backgroundColor: "#F9B872",
           backgroundImage: "radial-gradient(white, #F9B872)",
           overflow: "hidden",
         }}
@@ -48,7 +46,6 @@ const Home = () => {
         item
         xs={12}
         sx={{
-          // backgroundColor: "#F9B872",
           backgroundImage: "radial-gradient(white, #F9B872)",
         }}
       >
