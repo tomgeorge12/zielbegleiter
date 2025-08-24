@@ -32,7 +32,7 @@ const ContactForm = () => {
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
   const onSubmit = () => {
-    console.log(name, email, phone);
+    // console.log(name, email, phone);
     const templateParams = {
       name: name.value,
       email: email.value,
@@ -45,7 +45,7 @@ const ContactForm = () => {
         templateParams,
         "rwaZGbTlH-PGyMueA"
       )
-      .then((response) => setShowAlert(true))
+      .then(() => setShowAlert(true))
       .catch((error) => {
         if (error) {
           setErrorAlert(true);

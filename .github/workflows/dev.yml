@@ -39,6 +39,7 @@ jobs:
         runs-on: ubuntu-latest
         needs: 
           - lint
+          - log-check
         steps:
             - run: rm -rf $GITHUB_WORKSPACE/*
             - uses: actions/checkout@v4
