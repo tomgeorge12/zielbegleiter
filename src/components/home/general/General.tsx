@@ -12,8 +12,7 @@ import useLocale from "../../../hooks/useLocale";
 const General = () => {
   const ref = useRef<HTMLImageElement>(null);
   const { translate } = useLocale();
-
-  
+  console.log("rendering general");
   return (
     <CommonBox>
       <GridLegacy item sm={12} md={6}>
