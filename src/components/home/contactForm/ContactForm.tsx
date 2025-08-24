@@ -32,6 +32,7 @@ const ContactForm = () => {
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
   const onSubmit = () => {
+    console.log(name, email, phone);
     const templateParams = {
       name: name.value,
       email: email.value,
