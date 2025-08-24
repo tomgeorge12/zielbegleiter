@@ -56,6 +56,7 @@ const ContactForm = () => {
   useEffect(() => {
     const isValid = name.isValid && email.isValid && phone.isValid;
     setIsFormValid(isValid);
+    
   }, [name, email, phone]);
 
   const onNameChange = (e: any) => {
