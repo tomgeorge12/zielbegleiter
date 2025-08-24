@@ -1,0 +1,32 @@
+name: dev
+
+on:
+  push:
+    branches:
+      - 'Dev_FB'
+
+jobs:
+    lint:
+        runs-on: self-hosted
+        steps:
+            - run: rm -rf $GITHUB_WORKSPACE/*
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+            - run: npm ci
+            - run: npm run lint
+            - run: rm -rf $GITHUB_WORKSPACE/*
+    build:
+        runs-on: self-hosted
+        needs: 
+          - lint
+        steps:
+            - run: rm -rf $GITHUB_WORKSPACE/*
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+            - run: npm ci
+            - run: npm run build
+            - run: rm -rf $GITHUB_WORKSPACE/*
