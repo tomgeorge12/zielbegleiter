@@ -17,31 +17,31 @@ jobs:
             - run: npm ci
             - run: npm run lint
             - run: rm -rf $GITHUB_WORKSPACE/*
-    # log-check:
-    #     runs-on: ubuntu-latest
-    #     steps:
-    #         - run: rm -rf $GITHUB_WORKSPACE/*
-    #         - uses: actions/checkout@v4
-    #         - uses: actions/setup-node@v4
-    #           with:
-    #               node-version: '20'
-    #         - name: Fail on checked-in console.log
-    #           run: |
-    #             set -euo pipefail
-    #             # search only tracked (checked-in) files for console.log — ignore common output dirs
-    #             matches=$(git ls-files -z \
-    #               | xargs -0 grep -nH -E --exclude-dir={node_modules,dist,build,coverage} "console\.log\s*\(" || true)
-    #             if [ -n "$matches" ]; then
-    #               echo "ERROR: console.log usages found in checked-in files:"
-    #               echo "$matches"
-    #               exit 1
-    #             fi
-    #         - run: rm -rf $GITHUB_WORKSPACE/*
+    log-check:
+        runs-on: ubuntu-latest
+        steps:
+            - run: rm -rf $GITHUB_WORKSPACE/*
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+            - name: Fail on checked-in console.log
+              run: |
+                set -euo pipefail
+                # search only tracked (checked-in) files for console.log — ignore common output dirs
+                matches=$(git ls-files -z \
+                  | xargs -0 grep -nH -E --exclude-dir={node_modules,dist,build,coverage} "console\.log\s*\(" || true)
+                if [ -n "$matches" ]; then
+                  echo "ERROR: console.log usages found in checked-in files:"
+                  echo "$matches"
+                  exit 1
+                fi
+            - run: rm -rf $GITHUB_WORKSPACE/*
     build:
         runs-on: ubuntu-latest
         needs: 
           - lint
-          # - log-check
+          - log-check
         steps:
             - run: rm -rf $GITHUB_WORKSPACE/*
             - uses: actions/checkout@v4

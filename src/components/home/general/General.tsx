@@ -13,6 +13,7 @@ const General = () => {
   const ref = useRef<HTMLImageElement>(null);
   const { translate } = useLocale();
 
+  
   return (
     <CommonBox>
       <GridLegacy item sm={12} md={6}>
