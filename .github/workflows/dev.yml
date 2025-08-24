@@ -33,13 +33,24 @@ jobs:
                 # Get the list of files changed in the last commit
                 changed_files=$(git diff --name-only HEAD^ HEAD)
 
-                # search only changed files for console.log — ignore common output dirs
-                matches=$(echo "$changed_files" | grep -v -E 'node_modules|dist|build|coverage' | xargs grep -nH -E "console\.log\s*\(" || true)
-                if [ -n "$matches" ]; then
-                  echo "ERROR: console.log usages found in checked-in files:"
-                  echo "$matches"
-                  exit 1
-                fi
+                # Loop through each changed file
+                while IFS= read -r file; do
+                  # Get the diff for the current file
+                  diff=$(git diff HEAD^ HEAD -- "$file")
+
+                  # Extract only the added lines from the diff
+                  added_lines=$(echo "$diff" | grep '^+[^+]' | cut -c2-)
+
+                  # Search for console.log in the added lines
+                  matches=$(echo "$added_lines" | grep -nH -E "console\.log\s*\(")
+
+                  # If matches are found, print the error and exit
+                  if [ -n "$matches" ]; then
+                    echo "ERROR: console.log usages found in checked-in file $file:"
+                    echo "$matches"
+                    exit 1
+                  fi
+                done <<< "$changed_files"
             - run: rm -rf $GITHUB_WORKSPACE/*
     build:
         runs-on: ubuntu-latest
