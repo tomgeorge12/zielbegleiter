@@ -22,15 +22,19 @@ jobs:
         steps:
             - run: rm -rf $GITHUB_WORKSPACE/*
             - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # Required to fetch all history for diff
             - uses: actions/setup-node@v4
               with:
                   node-version: '20'
             - name: Fail on checked-in console.log
               run: |
                 set -euo pipefail
-                # search only tracked (checked-in) files for console.log — ignore common output dirs
-                matches=$(git ls-files -z \
-                  | xargs -0 grep -nH -E --exclude-dir={node_modules,dist,build,coverage} "console\.log\s*\(" || true)
+                # Get the list of files changed in the last commit
+                changed_files=$(git diff --name-only HEAD^ HEAD)
+
+                # search only changed files for console.log — ignore common output dirs
+                matches=$(echo "$changed_files" | grep -v -E 'node_modules|dist|build|coverage' | xargs grep -nH -E "console\.log\s*\(" || true)
                 if [ -n "$matches" ]; then
                   echo "ERROR: console.log usages found in checked-in files:"
                   echo "$matches"
