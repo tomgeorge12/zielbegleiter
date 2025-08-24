@@ -27,13 +27,15 @@ jobs:
                   node-version: '20'
             - name: Fail on checked-in console.log
               run: |
-               set -euo pipefail
-               matches=$(git grep -n --full-name -E "console\.log\s*\(" -- ':!node_modules' ':!dist' ':!build' ':!coverage' || true)
-               if [ -n "$matches" ]; then
-                 echo "ERROR: console.log usages found in checked-in files:"
-                 echo "$matches"
-                 exit 1
-               fi
+                set -euo pipefail
+                # search only tracked (checked-in) files for console.log — ignore common output dirs
+                matches=$(git ls-files -z \
+                  | xargs -0 grep -nH -E --exclude-dir={node_modules,dist,build,coverage} "console\.log\s*\(" || true)
+                if [ -n "$matches" ]; then
+                  echo "ERROR: console.log usages found in checked-in files:"
+                  echo "$matches"
+                  exit 1
+                fi
             - run: rm -rf $GITHUB_WORKSPACE/*
     build:
         runs-on: ubuntu-latest
